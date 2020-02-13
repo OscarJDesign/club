@@ -13,14 +13,16 @@ const GlobalStyles= createGlobalStyle`
 
   body {
         margin: 0;
+        padding:0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
       background: url(${Fondo}) no-repeat;
       background-size: cover;
       background-attachment: fixed;
-      font-family: 'Satisfy', cursive;
-      font-size: 16px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      text-align:center;
       ;
   }
 `;

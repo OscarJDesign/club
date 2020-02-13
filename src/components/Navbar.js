@@ -12,14 +12,14 @@ import styled from "@emotion/styled";
 
 const Header= styled.header`
     width: 100%;
-    height:200px;
+    height:130px;
     display: flex;
     background: url(${headmenu}) no-repeat;
     background-size: contain;
     background-attachment: fixed;
 
     flex-direction: row;
-    padding: 30px 0px;
+    padding: 10px 0px;
     justify-content: space-around;
     position: fixed;
     animation-name: tamaño;
@@ -30,10 +30,14 @@ const Header= styled.header`
         flex-direction: column;
         align-items: center;
     }
+
+    }
     img {
-        margin: -30px 0px;
+        margin: -10px 0px;
+        vertical-align:top;
     }
     .login{
+        margin: 20px 0px;
         font-size: 25px;
         color: rgb(255, 17, 108);
         transition: .7s;
@@ -80,6 +84,7 @@ const Navbar = () => {
         
         <div className="contenedor">
             <Header > 
+                    <div className="vacio"></div>
                     <div className="logo">
                         <img src={logo}  width = "" height="" alt="Logo_ClubVip"/>
                     </div>
