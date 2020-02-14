@@ -22,7 +22,7 @@ const GlobalStyles= createGlobalStyle`
       background-attachment: fixed;
       font-family: 'Dancing Script', cursive;
       font-size: 20px;
-      text-align:center;
+      
       ;
   }
 `;

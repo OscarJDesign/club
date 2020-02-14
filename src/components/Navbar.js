@@ -1,40 +1,51 @@
 import React from 'react';
 import logo from "../asset/img/logo.png";
+import btnmenu from "../asset/img/img-btn-menu.png";
 import headmenu from "../asset/img/menu.png";
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt,faBars } from '@fortawesome/free-solid-svg-icons';
 import styled from "@emotion/styled";
 
-
-
-
+const Link = styled.a`
+    
+    color: #ffffff;
+    padding-bottom: 15px 20px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent; 
+    
+     :hover, :focus{
+        border-bottom: 2px solid rgb(255, 17, 108);
+    }
+`;
 const Header= styled.header`
     width: 100%;
-    height:130px;
-    display: flex;
+    height:105px;
+    display: inline-flex;
     background: url(${headmenu}) no-repeat;
     background-size: contain;
     background-attachment: fixed;
-
-    flex-direction: row;
-    padding: 10px 0px;
+ 
     justify-content: space-around;
-    position: fixed;
     animation-name: tamaño;
-    animation-duration: 5s;
+    animation-duration: 2.2s;
     animation-iteration-count: initial; 
-    @media screen and (max-width: 600px){
-    
-        flex-direction: column;
-        align-items: center;
-    }
 
     }
-    img {
-        margin: -10px 0px;
-        vertical-align:top;
+    #btn-menu{
+        display:none;
+    }
+    label{
+        display:none;
+    }
+    
+    .menu ul{
+        list-style:none;
+        margin:0px;
+        padding:0px;
+
     }
     .login{
         margin: 20px 0px;
@@ -45,69 +56,72 @@ const Header= styled.header`
             color: #F84AA7;
         }
     }
+
+    /* --------------MEDIAQUERIS----------- */
     @keyframes tamaño{
     0%{height: 0px;
         
     } 
 }
-`;
-const Link = styled.a`
-    margin: 0px 20px;
-    color: #ffffff;
-    padding-bottom: 9px;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 2px solid transparent; 
-    font-size:  20px;
-    @media screen and (max-width: 600px){
-    
-        flex-direction: column;
-        margin: 40px 20px;
+    @media screen and (max-width:800px ){
+        label{
+            display:block;
+            :hover{
+            cursor:pointer;
+        }
+              
+        }
+        .login{
+           display:none; 
+        }
+        .menu{
+           position:absolute;
+           background:rgba(160, 160, 160, .6);
+           ul{
+               flex-direction:column;
+           }
+        }
+        
+        
+        
+        
     }
-    
-     :hover, :focus{
-        border-bottom: 2px solid rgb(255, 17, 108);
-    }
 `;
-
-
-
-
-
-
 
 
 const Navbar = () => {
     
     return (
-
-        
+      
         <div className="contenedor">
             <Header > 
-                    <div className="vacio"></div>
                     <div className="logo">
                         <img src={logo}  width = "" height="" alt="Logo_ClubVip"/>
                     </div>
+                    <input type="checkbox" id="btn-menu"></input>
+                    <label for="btn-menu">
+                        <img src={btnmenu}width = "30px" height="30px"></img>
+                    </label>
                     <nav className="menu">
-                        <Link href="#">Home</Link>
-                        <Link href="#">Trabajo</Link>
-                        <Link href="#">Videos</Link>
-                        <Link href="#">Avisos</Link>
-                        <Link href="#">Novedades</Link>
-                        <Link href="#">Nosotros</Link>
+                        <ul>
+                            <li><Link href="#">Home</Link></li>
+                            <li><Link href="#">Trabajo</Link></li>
+                            <li><Link href="#">Videos</Link></li>
+                            <li><Link href="#">Avisos</Link></li>
+                            <li><Link href="#">Novedades</Link></li>
+                            <li><Link href="#">Nosotros</Link></li>
+                        </ul>
                     </nav>
-                     <a href="" className="login">
+                    {/* <a href="#" className="toggle" oneclick="toggle()">
+                        <FontAwesomeIcon icon={faBars} />
+                    </a> */}
+
+                     <a href="#" className="login">
                      <FontAwesomeIcon icon={faSignInAlt} />
                      </a>        
             </Header> 
-                
-            
-            
-
-            
-            
         </div>
-
+ 
     );
 };
 

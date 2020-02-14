@@ -6,46 +6,22 @@ const ContenedorVideos = styled.div`
 
 section{
     background:rgba(160, 160, 160, .6);
-    margin:90px 5px;
+    margin:50px 5px;
     padding: 10px;
     border-radius:15px;
+    
 
     .contenedor{
         overflow:hidden;
+        align-items:center;
         
         .efecto-titulo{
-            display: inline-block;
-            position:static;
+            margin-top:0px;
             font-size:45px;
             color:rgb(255, 17, 108);
-
-            padding-top:-44px ;
-
-            ::after, ::before{
-                
-                    content:'';
-                    position:absolute;
-                    width:120px;
-                    height: 3px;
-                    background-color:currentColor;
-                    top:0.6em;
-                    
-                }
-                ::after{
-                    left:-135px;
-                }
-                ::before{
-                    right: -135px;
-                }
-                .foto-video{
-                    display: inline-block;
-                    flex-direction: row;
-                    flex-wrap:wrap;
-                    justify-content:space-between;
-                }
+            text-align:center;
             }
-            
-        }
+
         .contenedor-videos{
             display: flex;
             flex-direction:row;
@@ -53,17 +29,23 @@ section{
             justify-content:space-between;
 
             .cajavideos{
-                width:23%;
-
+                padding:10px;
+                width:33.3%;
+                align-items:center;
+                text-align:center;
+                
                 .foto-video{
                     width:100%;
-                    margin-bottom:10px;
+                    margin-bottom:40px;
+                    
                     
 
                     img{
                         width:100%;
                         vertical-align:top;
-                        border-radius:5px;
+                        border-radius:4px;
+                        border: 1px solid #484848;
+                        padding:5px;
                     }
                 }   
             }
