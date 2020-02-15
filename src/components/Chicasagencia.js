@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import chica from "../asset/img/chica.jpg";
+import wsp from "../asset/img/wsp.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAd, faWeightHanging } from '@fortawesome/free-solid-svg-icons';
+import { faAd } from '@fortawesome/free-solid-svg-icons';
 
 
 const Contenedorchicas = styled.div`
@@ -63,7 +64,13 @@ const Contenedorchicas = styled.div`
                     border-radius:4px;
                     box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                     .icono-wsp{
-                        color:white;
+                        display:flex;
+                        justify-content:center;
+                        cursor:pointer;
+                        padding:5px 0px;
+                        img{
+
+                        }
                     }
                     p{
                         margin: 0px;
@@ -82,21 +89,23 @@ const Contenedorchicas = styled.div`
             color:rgb(255, 17, 108);
         }
         section .contenedor .contenedor-imagenes .cajaimagenes{
-            width:50%;
+            width:33.3%;
         }
         
     }
-    @media screen and (max-width:500px){
+    @media screen and (max-width:800px){
         section .contenedor .efecto-titulo{
             font-size:30px;
             color:rgb(255, 17, 108);
         }
         section .contenedor .contenedor-imagenes .cajaimagenes{
-            width:100%;
+            width:50%;
         }
     }
-    @media screen and (max-width:370px){
-        
+    @media screen and (max-width: 500px){
+        section .contenedor .contenedor-imagenes .cajaimagenes{
+            width:100%;
+        }
     }
 `;
 
@@ -113,10 +122,10 @@ const Chicasagencia = () => {
                             </div>
                             <div className="datos-chica">
                                     <a href="#" className="icono-wsp" >
-                                        <FontAwesomeIcon  icon={faAd} />
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
                                     </a> 
                                     <p className="nombre-modelo">Nombre</p>
-                                    <p className="descripcion">Descripcion</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
                                     <p className="medidas">Medidas</p>
                             </div>
                         </div>
@@ -125,8 +134,11 @@ const Chicasagencia = () => {
                                 <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
                                     <p className="nombre-modelo">Nombre</p>
-                                    <p className="descripcion">Descripcion</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
                                     <p className="medidas">Medidas</p>
                             </div>
                         </div>
@@ -135,8 +147,11 @@ const Chicasagencia = () => {
                                 <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
                                     <p className="nombre-modelo">Nombre</p>
-                                    <p className="descripcion">Descripcion</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
                                     <p className="medidas">Medidas</p>
                             </div>
                         </div>
@@ -145,8 +160,11 @@ const Chicasagencia = () => {
                                 <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
                                     <p className="nombre-modelo">Nombre</p>
-                                    <p className="descripcion">Descripcion</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
                                     <p className="medidas">Medidas</p>
                             </div>
                         </div>
@@ -155,11 +173,54 @@ const Chicasagencia = () => {
                                 <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
                                     <p className="nombre-modelo">Nombre</p>
-                                    <p className="descripcion">Descripcion</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
                                     <p className="medidas">Medidas</p>
                             </div>
                         </div>
+                        <div className="cajaimagenes">
+                            <div className="imagen">
+                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
+                                    <p className="nombre-modelo">Nombre</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
+                                    <p className="medidas">Medidas</p>
+                            </div>
+                        </div>
+                        <div className="cajaimagenes">
+                            <div className="imagen">
+                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
+                                    <p className="nombre-modelo">Nombre</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
+                                    <p className="medidas">Medidas</p>
+                            </div>
+                        </div>
+                        <div className="cajaimagenes">
+                            <div className="imagen">
+                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            <div className="datos-chica">
+                                    <a href="#" className="icono-wsp" >
+                                        <img src={wsp}  width = "" height="" alt="wsp"/>
+                                    </a> 
+                                    <p className="nombre-modelo">Nombre</p>
+                                    <p className="descripcion">Nacionalidad, Edad</p>
+                                    <p className="medidas">Medidas</p>
+                            </div>
+                        </div>
+                        
                     </div>      
                 </div>
             </section>  
