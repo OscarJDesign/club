@@ -146,7 +146,7 @@ const Header= styled.header`
             flex-direction:column;
             width:100%;
             margin-top:90px;
-            box-shadow: 5px 5px 10px rgba(255, 17, 108, .6);
+            
             .iconos-menu{
                display:fixed;
                justify-content:left;

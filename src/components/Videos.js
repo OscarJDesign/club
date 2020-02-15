@@ -8,7 +8,7 @@ const ContenedorVideos = styled.div`
 
 section{
     background:rgba(255, 255, 255, .6);
-    margin:130px 20px;
+    margin:130px 20px 0px 20px;
     padding: 10px;
     border-radius:10px;
     box-shadow: 10px 10px 7px rgba(0, 0, 0, .6);
@@ -51,7 +51,7 @@ section{
                         width:100%;
                         vertical-align:top;
                         border-radius:14px;
-                        border: 1px solid #484848;
+                        border: 1px solid rgba(0, 0, 0, .3);
                         padding:5px;
                     }
                 }   
