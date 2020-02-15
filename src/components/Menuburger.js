@@ -2,7 +2,7 @@ import React from 'react';
 import btnmenu from "../asset/img/img-btn-menu.png";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt,faBars, faHome, faFemale, faAd, faVideo, faNewspaper, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faFemale, faAd, faVideo, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 const Link = styled.a`
     
@@ -31,22 +31,27 @@ const Menubur= styled.div`
         display:flex;
         margin-top:0px;
         justify-content:center;
-        margin-top:-100px;
+        margin-top:-30px;
+        
     }
     .menu ul{
         list-style:none;
         display:flex;
         margin:0px 0px;
         justify-content:center;
+        z-index:100;
+        position:fixed;
     }
     .menu li{
         .iconos-menu{
                display:none;
                justify-content:left;
                
+               
            }
     }
     .menu li a{
+
             display:block;
             padding:10px 20px;
             color:rgb(255,255,255);
@@ -81,8 +86,8 @@ const Menubur= styled.div`
                 padding:0px;
                 background:rgba(0, 0, 0, 0.9);
                 flex-direction:column;
-                width:100%;
-                margin-top:100px;
+                width:40%;
+                margin-top:140px;
             
             .iconos-menu{
                display:fixed;

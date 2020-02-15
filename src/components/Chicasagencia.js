@@ -2,8 +2,6 @@ import React from 'react';
 import styled from "@emotion/styled";
 import chica from "../asset/img/chica.jpg";
 import wsp from "../asset/img/wsp.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAd } from '@fortawesome/free-solid-svg-icons';
 
 
 const Contenedorchicas = styled.div`
