@@ -5,7 +5,7 @@ import headmenu from "../asset/img/menu.png";
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt,faBars } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt,faBars, faHome, faFemale, faAd, faVideo, faNewspaper, faUser } from '@fortawesome/free-solid-svg-icons';
 import styled from "@emotion/styled";
 
 const Link = styled.a`
@@ -62,9 +62,18 @@ const Header= styled.header`
         margin:0px 0px;
         justify-content:center;
     }
+    .menu li{
+        .iconos-menu{
+               display:none;
+               justify-content:left;
+               
+           }
+    }
     .menu li a{
             display:block;
             padding:10px 20px;
+            color:rgb(255,255,255);
+            text-shadow: 1px 3px 3px #696;
 
     }
     .login{
@@ -138,6 +147,12 @@ const Header= styled.header`
             width:100%;
             margin-top:90px;
             box-shadow: 5px 5px 10px rgba(255, 17, 108, .6);
+            .iconos-menu{
+               display:fixed;
+               justify-content:left;
+               margin-top:-20px;
+              
+           }
             }
 
            li{
@@ -147,6 +162,7 @@ const Header= styled.header`
                border-top: 1px solid rgba(255,255,255,.1);
                border-width:1px;
            }
+           
         }
         #btn-menu:checked ~ .menu{
             margin:0;
@@ -189,17 +205,24 @@ const Navbar = () => {
                     </label>
                     <nav className="menu">
                         <ul>
-                            <li><Link href="#">Home</Link></li>
-                            <li><Link href="#">Trabajo</Link></li>
-                            <li><Link href="#">Videos</Link></li>
-                            <li><Link href="#">Avisos</Link></li>
-                            <li><Link href="#">Novedades</Link></li>
-                            <li><Link href="#">Nosotros</Link></li>
+                            <li><Link href="#">Home
+                            <FontAwesomeIcon className="iconos-menu" icon={faHome} />
+                            </Link></li>
+                            <li><Link href="#">Trabajo
+                            <FontAwesomeIcon className="iconos-menu" icon={faFemale} /></Link></li>
+                            <li><Link href="#">Videos
+                            <FontAwesomeIcon className="iconos-menu" icon={faVideo} /></Link></li>
+                            <li><Link href="#">Avisos
+                            <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Link></li>
+                            <li><Link href="#">Novedades
+                            <FontAwesomeIcon className="iconos-menu" icon={faNewspaper} /></Link></li>
+                            <li><Link href="#">Nosotros
+                            <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Link></li>
                         </ul>
                     </nav>
                     <div className="login">
                     <a href="#" >
-                     <FontAwesomeIcon icon={faSignInAlt} />
+                     <FontAwesomeIcon  icon={faSignInAlt} />
                      </a> 
                     </div>
                             
