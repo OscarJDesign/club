@@ -18,17 +18,19 @@ const Link = styled.a`
     
      :hover, :focus{
         border-bottom: 2px solid rgb(255, 17, 108);
+        border-radius:10px;
+        border-width:2px;
     }
 `;
 const Header= styled.header`
     width: 100%;
-    height:105px;
-    display: inline-flex;
+    height:130px;
     background: url(${headmenu}) no-repeat;
     background-size: contain;
     background-attachment: fixed;
- 
+    padding: 10px 0px;
     justify-content: space-around;
+    position: fixed;
     animation-name: tamaño;
     animation-duration: 2.2s;
     animation-iteration-count: initial; 
@@ -39,21 +41,45 @@ const Header= styled.header`
     }
     label{
         display:none;
+        width:30px;
+        padding:10px;
     }
-    
+    .logo{
+        padding:0px 50px;
+        img{
+            display:block;
+        }
+    }
+    .menu{
+        display:flex;
+        margin-top:0px;
+        justify-content:center;
+        margin-top:-100px;
+    }
     .menu ul{
         list-style:none;
-        margin:0px;
-        padding:0px;
+        display:flex;
+        margin:0px 0px;
+        justify-content:center;
+    }
+    .menu li a{
+            display:block;
+            padding:10px 20px;
 
     }
     .login{
-        margin: 20px 0px;
-        font-size: 25px;
-        color: rgb(255, 17, 108);
-        transition: .7s;
-        :hover{
-            color: #F84AA7;
+        display:flex;
+        justify-content:right;
+        margin-top:-40px;
+        a{
+            display:block;
+            margin: 0px 50px;
+            font-size: 25px;
+            color: rgb(255, 17, 108);
+            transition: .7s;
+            :hover{
+                color: #F84AA7;
+            }
         }
     }
 
@@ -63,28 +89,87 @@ const Header= styled.header`
         
     } 
 }
-    @media screen and (max-width:800px ){
-        label{
-            display:block;
-            :hover{
-            cursor:pointer;
-        }
-              
-        }
+    @media screen and (max-width:1010px ){
         .login{
-           display:none; 
+            display:flex;
+            margin:-310px 0px;
+            a{
+                justify-content:right;
+                display:block;
+            }
+        }
+        label{
+            display:fixed;
+            justify-content:left;
+            margin:-100px 30px;   
+            :hover{
+                cursor:pointer;
+            }
+            img{
+                display:block;
+            }    
+        }
+        .logo{
+            display:flex;
+            justify-content:center;
+            
+            img{
+                display:block;
+                
+            }
+
         }
         .menu{
-           position:absolute;
-           background:rgba(160, 160, 160, .6);
+           position:flex;
+           justify-content:left;
+           width:38%;
+           margin-left:-40%;
+           transition:all 0.5s;
+
+           
+
+
            ul{
-               flex-direction:column;
+            display:flex;
+            border-radius:10px;
+            padding:0px;
+            background:rgba(0, 0, 0, 0.9);
+            flex-direction:column;
+            width:100%;
+            margin-top:90px;
+            box-shadow: 5px 5px 10px rgba(255, 17, 108, .6);
+            }
+
+           li{
+            text-align:center;
+            border-radius:10px;
+            border-style:dashed;
+               border-top: 1px solid rgba(255,255,255,.1);
+               border-width:1px;
            }
         }
-        
-        
-        
-        
+        #btn-menu:checked ~ .menu{
+            margin:0;
+        }
+        }
+    }
+    @media screen and (max-width:370px ){
+        .logo img{
+                width:160px;
+        }
+        label{   
+            margin:-90px 0px;   
+        }
+        .login{
+
+            display:flex;
+            margin:-318px -40px;
+            padding:0px 0px;
+        }
+
+    }
+    .menu{
+        padding:0px 0px;
     }
 `;
 
@@ -112,13 +197,12 @@ const Navbar = () => {
                             <li><Link href="#">Nosotros</Link></li>
                         </ul>
                     </nav>
-                    {/* <a href="#" className="toggle" oneclick="toggle()">
-                        <FontAwesomeIcon icon={faBars} />
-                    </a> */}
-
-                     <a href="#" className="login">
+                    <div className="login">
+                    <a href="#" >
                      <FontAwesomeIcon icon={faSignInAlt} />
-                     </a>        
+                     </a> 
+                    </div>
+                            
             </Header> 
         </div>
  

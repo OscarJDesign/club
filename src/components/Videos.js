@@ -6,7 +6,7 @@ const ContenedorVideos = styled.div`
 
 section{
     background:rgba(160, 160, 160, .6);
-    margin:50px 5px;
+    margin:130px 5px;
     padding: 10px;
     border-radius:15px;
     
@@ -54,13 +54,35 @@ section{
     }
     
 }
-    
+    @media screen and (max-width: 1100px){
+        section .contenedor .efecto-titulo{
+            font-size:35px;
+            color:white;
+        }
+        section .contenedor .contenedor-videos .cajavideos{
+            width:50%;
+        }
+        
+    }
+    @media screen and (max-width:500px){
+        section .contenedor .efecto-titulo{
+            font-size:30px;
+            color:white;
+        }
+        section .contenedor .
+    }
+    @media screen and (max-width:370px){
+        section .contenedor .contenedor-videos .cajavideos{
+            width:100%;
+        }
+    }
 `;
+
 
 const Videos = () => {
     return (
         <ContenedorVideos >
-            <p className="vacio" ></p>;
+           
             <section className="SeccionVideos">
                 <div className="contenedor">
                     <h2 className="efecto-titulo">Videos</h2>
