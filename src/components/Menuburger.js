@@ -122,22 +122,22 @@ const Menuburger = () => {
     return (
         <Menubur>
             <input type="checkbox" id="btn-menu"></input>
-                        <label for="btn-menu">
-                            <img src={btnmenu}width = "30px" height="30px"></img>
+                        <label htmlFor="btn-menu">
+                            <img src={btnmenu} width = "30px"  height="30px" alt="Menú"></img>
                         </label>
             <nav className="menu">
                 <ul>
-                    <li><Link href="#">Home
+                    <li><Link href="#!">Home
                     <FontAwesomeIcon className="iconos-menu" icon={faHome} /></Link></li>
-                    <li><Link href="#">Trabajo
+                    <li><Link href="#!">Trabajo
                     <FontAwesomeIcon className="iconos-menu" icon={faFemale} /></Link></li>
-                    <li><Link href="#">Videos
+                    <li><Link href="#!">Videos
                     <FontAwesomeIcon className="iconos-menu" icon={faVideo} /></Link></li>
-                    <li><Link href="#">Avisos
+                    <li><Link href="#!">Avisos
                     <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Link></li>
-                    <li><Link href="#">Novedades
+                    <li><Link href="#!">Novedades
                     <FontAwesomeIcon className="iconos-menu" icon={faNewspaper} /></Link></li>
-                    <li><Link href="#">Nosotros
+                    <li><Link href="#!">Nosotros
                     <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Link></li>
                 </ul>
             </nav> 

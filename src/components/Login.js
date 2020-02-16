@@ -1,23 +1,23 @@
 import React from 'react';
-import btnmenu from "../asset/img/img-btn-menu.png";
+// import btnmenu from "../asset/img/img-btn-menu.png";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faFemale, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Link = styled.a`
+// const Link = styled.a`
     
-    color: #ffffff;
-    padding-bottom: 15px 20px;
-    display: block;
-    text-decoration: none;
-    border-bottom: 2px solid transparent; 
+//     color: #ffffff;
+//     padding-bottom: 15px 20px;
+//     display: block;
+//     text-decoration: none;
+//     border-bottom: 2px solid transparent; 
     
-     :hover, :focus{
-        border-bottom: 2px solid rgb(255, 17, 108);
-        border-radius:10px;
-        border-width:2px;
-    }
-`;
+//      :hover, :focus{
+//         border-bottom: 2px solid rgb(255, 17, 108);
+//         border-radius:10px;
+//         border-width:2px;
+//     }
+// `;
 const Botonlogin= styled.div`
     .contenedor-general{
         overflow:hidden;
@@ -154,17 +154,17 @@ const Login = () => {
         <Botonlogin>
             <div className="contenedor-general">
                 <input type="checkbox" id="btn-login"></input>
-                <label className="btn-login" for="btn-login">
+                <label className="btn-login" htmlFor="btn-login">
                     <FontAwesomeIcon className="icono-login" icon={faSignInAlt} /></label>
                 <input type="checkbox" id="btn-login"></input>
                 <label className="login" >
-                    <label className="fondotransparente" for="btn-login"> </label>
+                    <label className="fondotransparente" htmlFor="btn-login"> </label>
                     <form className="formulario">
                         <h3>Ingrese al Sitema</h3>
-                        <li><input type="text" placeholder="Nombre" name="nombre" requerid></input></li>
-                        <li><input type="password" placeholder="Contraseña" name="contraseña" requerid></input></li>
+                        <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
+                        <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
                         <li><input className="boton" type="submit" value="IniciarSesion"></input></li>
-                        <a href="#" className="Registrate">Registrate aquí </a>
+                        <a href="#!" className="Registrate">Registrate aquí </a>
                     </form>
                 </label> 
             </div>    
