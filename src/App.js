@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import GlobalStyles from './components/GlobalStyles';
 import Videos from './components/Videos';
 import Chicasagencia from './components/Chicasagencia';
-import Registro from './components/Registro';
 import Menuburger from './components/Menuburger';
 import Login from './components/Login';
+import Publicidad from './components/Publicidad';
 
 function App() {
   return (  
@@ -20,6 +20,8 @@ function App() {
     <Videos />
     <br/>
     <Chicasagencia />
+    <br/>
+    <Publicidad />
     </>
   );
 }

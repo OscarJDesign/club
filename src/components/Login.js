@@ -48,7 +48,7 @@ const Botonlogin= styled.div`
                 position:relative;
                 background:transparent;
                 width:100%;
-                
+                background:transparent;
                 margin-right:-100%;
                ;
 
@@ -59,11 +59,12 @@ const Botonlogin= styled.div`
                 justify-content:center;
                 position:fixed;
                 width:100%;
-                margin-left:-100%;
+                margin-left:-130%;
                 transition:all 0.5s;
                 background:transparent;
                 padding-left:40px;
                 padding-right:40px;
+                background:transparent;
             
 
                 .formulario{
@@ -74,7 +75,7 @@ const Botonlogin= styled.div`
                     padding:   5px 0px;
                     background:rgba(0, 0, 0, 0.9);
                     flex-direction:column;
-                    width:100%;
+                    width:30%;
                     margin-top:140px;
                     margin-bottom:140px;
                     z-index:100;
@@ -128,20 +129,24 @@ const Botonlogin= styled.div`
             }
 
         }
-        @media screen and (max-width:1010px ){
-            
+        @media screen and (max-width:850px ){
+            .contenedor-general .login .formulario{
+                width:40%;
+            }
             
             
         }
 
-        @media screen and (max-width:370px ){
-            .btn-login{   
-                margin:-35px -10px;   
+        @media screen and (max-width:680px ){
+            .contenedor-general .login .formulario{
+                width:70%;
             }
         }
-        .login{
-            padding:0px 0px;
-    }
+        @media screen and (max-width:500px ){
+            .contenedor-general .login .formulario{
+                width:100%;
+            }
+        }
 `;
 
 const Login = () => {
@@ -155,7 +160,7 @@ const Login = () => {
                 <label className="login" >
                     <label className="fondotransparente" for="btn-login"> </label>
                     <form className="formulario">
-                        <h3>Bienvenido a las Putas</h3>
+                        <h3>Ingrese al Sitema</h3>
                         <li><input type="text" placeholder="Nombre" name="nombre" requerid></input></li>
                         <li><input type="password" placeholder="Contraseña" name="contraseña" requerid></input></li>
                         <li><input className="boton" type="submit" value="IniciarSesion"></input></li>

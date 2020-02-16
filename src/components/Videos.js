@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import video from "../asset/img/video.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const ContenedorVideos = styled.div`
 
