@@ -5,6 +5,7 @@ import Videos from './components/Videos';
 import Chicasagencia from './components/Chicasagencia';
 import Registro from './components/Registro';
 import Menuburger from './components/Menuburger';
+import Login from './components/Login';
 
 function App() {
   return (  
@@ -12,7 +13,7 @@ function App() {
     <GlobalStyles />
     <Navbar />
     <br/>
-    <Registro />
+    <Login />
     <br/>
     <Menuburger />
     <br/>

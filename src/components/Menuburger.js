@@ -69,13 +69,13 @@ const Menubur= styled.div`
             }
             img{
                 position:fixed;
-                display:fixed;
+
                 z-index: 100;
             }    
         }
         .menu{
            position:fixed;
-           justify-content:left;
+           justify-content:flex-end;
            width:38%;
            margin-left:-40%;
            transition:all 0.5s;
@@ -91,7 +91,7 @@ const Menubur= styled.div`
             
             .iconos-menu{
                display:fixed;
-               justify-content:left;
+               justify-content:flex-end;
                margin-top:-20px;
             }
         }
