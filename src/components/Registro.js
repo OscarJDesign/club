@@ -2,16 +2,15 @@ import React from 'react';
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt} from '@fortawesome/free-solid-svg-icons';
-
 const ContenedorRegistro = styled.div`
     .login{
         display:flex;
-        justify-content:right;
+        justify-content:flex-end;
         margin-top:0px;
         a{
             position:fixed;
             display:block;
-            margin: 0px 50px;
+            margin: 0px -30px;
             font-size: 25px;
             color: rgb(255, 17, 108);
             transition: .7s;
@@ -27,19 +26,18 @@ const ContenedorRegistro = styled.div`
             margin:0px -20px;
             a{
                 display:fixed;
-                justify-content:right;
+                justify-content:flex-end;
                 
             }
         }
     }
-    @media screen and (max-width:1010px ){
+    @media screen and (max-width:800px ){
         .login{
             margin:0px -30px;
         }
     }
     
 `;
-
 const Registro = () => {
     return (
         <ContenedorRegistro>
@@ -51,5 +49,4 @@ const Registro = () => {
         </ContenedorRegistro>
     );
 };
-
 export default Registro;
