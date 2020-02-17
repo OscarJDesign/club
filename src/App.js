@@ -2,16 +2,17 @@ import React, { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import GlobalStyles from "./components/GlobalStyles";
 import Videos from "./components/Videos";
-import Spinner from "./components/Spinner";
-
-// import Chicasagencia from "./components/Chicasagencia";
-// import Menuburger from "./components/Menuburger";
-// import Login from "./components/Login";
 import Publicidad from "./components/Publicidad";
+// import Spinner from "./components/Spinner";
 
-const Menuburger = lazy(() => import("./components/Menuburger"));
-const Login = lazy(() => import("./components/Login"));
-const Chicasagencia = lazy(() => import("./components/Chicasagencia"));
+// import CuadroVideos from "./components/CuadroVideos";
+import Chicasagencia from "./components/Chicasagencia";
+import Menuburger from "./components/Menuburger";
+import Login from "./components/Login";
+
+// const Menuburger = lazy(() => import("./components/Menuburger"));
+// const Login = lazy(() => import("./components/Login"));
+// const Chicasagencia = lazy(() => import("./components/Chicasagencia"));
 
 function App() {
   return (
@@ -19,39 +20,39 @@ function App() {
       <GlobalStyles />
       <Navbar />
       <br />
-      <Suspense
+      {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
         <Login />
-      </Suspense>
+      {/* </Suspense> */}
       <br />
-      <Suspense
+      {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
         <Menuburger />
-      </Suspense>
+      {/* </Suspense> */}
       <br />
       <Videos />
       <br />
-      <Suspense
+      {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
         <Chicasagencia />
         <br />
         <Publicidad />
-      </Suspense>
+      {/* </Suspense> */}
     </>
   );
 }

@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import styled from "@emotion/styled";
-import video from "../asset/img/video.jpg";
+import Spinner from "./Spinner";
+
+// import video from "../asset/img/video.jpg";
+// import CuadroVideos from './CuadroVideos';
+
+const CuadroVideos = lazy(() => import("./CuadroVideos"));
 
 const ContenedorVideos = styled.div`
 
@@ -32,33 +37,17 @@ section{
             justify-content:space-between;
 
             .cajavideos{
+                
                 padding:0px 10px;
                 width:33.3%;
                 align-items:center;
                 text-align:center;
                 
-                .foto-video{
-                    width:100%;
-                    margin-bottom:20px;
-                    box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
-                    border-radius:14px;
-                    
-                    
-
-                    img{
-                        width:100%;
-                        vertical-align:top;
-                        border-radius:14px;
-                        border: 1px solid rgba(0, 0, 0, .3);
-                        padding:5px;
-                    }
                 }   
             }
             
         }
     }
-    
-}
     @media screen and (max-width: 1100px){
         section .contenedor .efecto-titulo{
             font-size:35px;
@@ -81,6 +70,7 @@ section{
     @media screen and (max-width:370px){
         
     }
+    
 `;
 
 
@@ -92,71 +82,43 @@ const Videos = () => {
                 <div className="contenedor">
                     <h2 className="efecto-titulo">Videos</h2>
                     <div className="contenedor-videos"> 
+                    
                         <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
-                                <p className="nombre-modelo">Informacion de la modelo</p>
+                            <Suspense fallback={
+                            <div>
+                                <Spinner />
                             </div>
-                        </div>
-                        <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
+                            }>
+                            <CuadroVideos/> 
+                            <div className="titulo-video">
                                 <p className="nombre-modelo">Informacion de la modelo</p>   
                             </div>
-                        </div>
+                            </Suspense> 
+                        </div>  
                         <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
+                            <Suspense fallback={
+                            <div>
+                                <Spinner />
+                            </div>
+                            }>
+                            <CuadroVideos/> 
+                            <div className="titulo-video">
                                 <p className="nombre-modelo">Informacion de la modelo</p>   
                             </div>
-                        </div>
+                            </Suspense> 
+                        </div> 
                         <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
+                            <Suspense fallback={
+                            <div>
+                                <Spinner />
+                            </div>
+                            }>
+                            <CuadroVideos/> 
+                            <div className="titulo-video">
                                 <p className="nombre-modelo">Informacion de la modelo</p>   
                             </div>
-                        </div>
-                        <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
-                                <p className="nombre-modelo">Informacion de la modelo</p>   
-                            </div>
-                        </div>
-                        <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
-                                <p className="nombre-modelo">Informacion de la modelo</p>   
-                            </div>
-                        </div>
-                        <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
-                                <p className="nombre-modelo">Informacion de la modelo</p>   
-                            </div>
-                        </div>
-                        <div className="cajavideos">
-                            <div className="foto-video">
-                                <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                                </div>
-                                <div className="titulo-video">
-                                <p className="nombre-modelo">Informacion de la Modelo </p>   
-                            </div>
-                        </div>
-                        
+                            </Suspense> 
+                        </div>           
                     </div>
                 </div>
             </section>   
