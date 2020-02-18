@@ -118,7 +118,43 @@ const Videos = () => {
                                 <p className="nombre-modelo">Informacion de la modelo</p>   
                             </div>
                             </Suspense> 
-                        </div>           
+                        </div>     
+                        <div className="cajavideos">
+                            <Suspense fallback={
+                            <div>
+                                <Spinner />
+                            </div>
+                            }>
+                            <CuadroVideos/> 
+                            <div className="titulo-video">
+                                <p className="nombre-modelo">Informacion de la modelo</p>   
+                            </div>
+                            </Suspense> 
+                        </div>   
+                        <div className="cajavideos">
+                            <Suspense fallback={
+                            <div>
+                                <Spinner />
+                            </div>
+                            }>
+                            <CuadroVideos/> 
+                            <div className="titulo-video">
+                                <p className="nombre-modelo">Informacion de la modelo</p>   
+                            </div>
+                            </Suspense> 
+                        </div>   
+                        <div className="cajavideos">
+                            <Suspense fallback={
+                            <div>
+                                <Spinner />
+                            </div>
+                            }>
+                            <CuadroVideos/> 
+                            <div className="titulo-video">
+                                <p className="nombre-modelo">Informacion de la modelo</p>   
+                            </div>
+                            </Suspense> 
+                        </div>         
                     </div>
                 </div>
             </section>   

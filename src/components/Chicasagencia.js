@@ -116,7 +116,7 @@ const Chicasagencia = () => {
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -129,7 +129,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -142,7 +142,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -155,7 +155,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -168,7 +168,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -181,7 +181,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -194,7 +194,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >
@@ -207,7 +207,7 @@ const Chicasagencia = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="http://18.217.42.238/uploads/0aa98a95-66cd-4fd0-9f42-301b1f3a47b9.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                     <a href="#!" className="icono-wsp" >

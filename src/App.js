@@ -9,6 +9,7 @@ import Publicidad from "./components/Publicidad";
 import Chicasagencia from "./components/Chicasagencia";
 import Menuburger from "./components/Menuburger";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 
 // const Menuburger = lazy(() => import("./components/Menuburger"));
 // const Login = lazy(() => import("./components/Login"));
@@ -53,6 +54,8 @@ function App() {
         <br />
         <Publicidad />
       {/* </Suspense> */}
+      <br />
+      <Footer />
     </>
   );
 }

@@ -45,7 +45,7 @@ const Menubur= styled.div`
     .menu li{
         .iconos-menu{
                display:none;
-               justify-content:left;
+               justify-content:flex-end;
                
                
            }
@@ -62,7 +62,7 @@ const Menubur= styled.div`
         
         label{
             display:fixed;
-            justify-content:left;
+            justify-content:flex-end;
             margin:-35px 0px;   
             :hover{
                 cursor:pointer;
