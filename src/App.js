@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import GlobalStyles from "./components/GlobalStyles";
 import Videos from "./components/Videos";
-import Publicidad from "./components/Publicidad";
+import Avisos from "./components/Avisos";
 // import Spinner from "./components/Spinner";
 
 // import CuadroVideos from "./components/CuadroVideos";
@@ -52,7 +52,7 @@ function App() {
       > */}
         <Chicasagencia />
         <br />
-        <Publicidad />
+        <Avisos />
       {/* </Suspense> */}
       <br />
       <Footer />

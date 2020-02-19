@@ -12,7 +12,7 @@ const ContenedorVideos = styled.div`
 section{
     background:rgba(255, 255, 255, .6);
     margin:130px 20px 0px 20px;
-    padding: 10px;
+    padding: 3px;
     border-radius:10px;
     box-shadow: 10px 10px 7px rgba(0, 0, 0, .6);
     
@@ -58,6 +58,12 @@ section{
         }
         
     }
+    @media screen and (max-width:670px){
+        section .contenedor .contenedor-videos .cajavideos{
+            width:100%;
+            margin:0px;
+     }
+    }
     @media screen and (max-width:500px){
         section .contenedor .efecto-titulo{
             font-size:30px;
@@ -65,11 +71,10 @@ section{
         }
         section .contenedor .contenedor-videos .cajavideos{
             width:100%;
-        }
+            margin:0px;
+     }
     }
-    @media screen and (max-width:370px){
-        
-    }
+    
     
 `;
 

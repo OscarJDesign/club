@@ -4,20 +4,6 @@ import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
-// const Link = styled.a`
-    
-//     color: #ffffff;
-//     padding-bottom: 15px 20px;
-//     display: block;
-//     text-decoration: none;
-//     border-bottom: 2px solid transparent; 
-    
-//      :hover, :focus{
-//         border-bottom: 2px solid rgb(255, 17, 108);
-//         border-radius:10px;
-//         border-width:2px;
-//     }
-// `;
 const Botonlogin= styled.div`
     .contenedor-general{
         overflow:hidden;
@@ -142,7 +128,20 @@ const Botonlogin= styled.div`
                 width:70%;
             }
         }
-        @media screen and (max-width:500px ){
+        @media screen and (max-width:540px ){
+            .btn-login{
+                display:flex;
+                position:relative;
+                right:22px;
+                top:30px;
+                .icono-login{
+                    display:flex;
+                    position:fixed;
+                    justify-content:flex-end;
+                    
+                }
+                
+            }
             .contenedor-general .login .formulario{
                 width:100%;
             }

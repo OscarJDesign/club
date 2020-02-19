@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from "../asset/img/logo.png";
 import headmenu from "../asset/img/menu.png";
+
 import styled from "@emotion/styled";
 
 
 const Header= styled.header`
     width: 100%;
-    height:130px;
+    height:230px;
     background: url(${headmenu}) no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -16,6 +17,7 @@ const Header= styled.header`
     animation-name: tamaño;
     animation-duration: 2.2s;
     animation-iteration-count: initial; 
+    z-index:100;
     .logo{
         padding:0px 50px;
         img{
@@ -33,19 +35,31 @@ const Header= styled.header`
         
         .logo{
             display:flex;
+            position:relative;
+            top:-10px;
             justify-content:center;
+            padding:50px 0px;
             
             img{
                 display:block;
+                width:140px;
                 
             }
         }
         
 
-    @media screen and (max-width:370px ){
-        .logo img{
-                width:160px;
+    @media screen and (max-width:670px ){
+        .logo {
+            display:flex;
+            position:relative;
+            top:-30px;
+            img{
+                width:130px;
+            }
         }
+    }
+    @media screen and (max-width:620px ){
+        
     }
     }   
 `;

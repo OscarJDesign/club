@@ -9,7 +9,6 @@ const Header= styled.header`
     height:130px;
     background: url(${headmenu}) no-repeat;
     background-size: cover;
-    padding: 10px 0px;
     justify-content: space-around;
    
     animation-name: tamaño;

@@ -31,7 +31,7 @@ const Menubur= styled.div`
         display:flex;
         margin-top:0px;
         justify-content:center;
-        margin-top:-30px;
+        margin-top:-40px;
         
     }
     .menu ul{
@@ -58,73 +58,64 @@ const Menubur= styled.div`
             text-shadow: 1px 3px 3px #696;
 
     }
-    @media screen and (max-width:1010px ){
-        
-        label{
-            display:fixed;
-            justify-content:flex-end;
-            margin:-35px 0px;   
-            :hover{
-                cursor:pointer;
-            }
-            img{
-                position:fixed;
-
-                z-index: 100;
-            }    
-        }
+    @media screen and (max-width:730px ){
         .menu{
-           position:fixed;
-           justify-content:flex-end;
-           width:38%;
-           margin-left:-40%;
-           transition:all 0.5s;
-
-            ul{
-                display:flex;
-                border-radius:10px;
-                padding:0px;
-                background:rgba(0, 0, 0, 0.9);
-                flex-direction:column;
-                width:40%;
-                margin-top:140px;
-            
-            .iconos-menu{
-               display:fixed;
-               justify-content:flex-end;
-               margin-top:-20px;
+            justify-content:center;
+            margin-left:-30px;
+            li a{
+                padding:10px 10px;
             }
         }
-           li{
-            text-align:center;
-            border-radius:10px;
-            border-style:dashed;
-               border-top: 1px solid rgba(255,255,255,.1);
-               border-width:1px;
-           }  
-        }
-        #btn-menu:checked ~ .menu{
-            margin:0px;
-        }
+        
     }
 
-    @media screen and (max-width:370px ){
-        label{   
-            margin:-35px -10px;   
+    @media screen and (max-width:620px ){
+        .menu li a{
+
+            display:block;
+            padding:10px 10px;
+            color:rgb(255,255,255);
+            text-shadow: 1px 3px 3px #696;
         }
     }
-    .menu{
-        padding:0px 0px;
+    @media screen and (max-width:550px ){
+        .menu{
+            justify-content:center;
+                margin-left:-40px;
+                ul{
+                    margin-left:-20px;
+                
+                li a{
+                    padding:10px 10px;
+                }
+            }
+        }
     }
+    @media screen and (max-width:470px ){
+        .menu{
+            justify-content:center;
+                margin-left:-40px;
+                ul{
+                    margin-left:-20px;
+                
+                li a{
+                    font-size:15px;
+                    padding:10px 7px;
+                }
+            }
+        }
+    }
+        
+    
+    
 `;
 
 const Menuburger = () => {
     return (
         <Menubur>
-            <input type="checkbox" id="btn-menu"></input>
-                        <label htmlFor="btn-menu">
-                            <img src={btnmenu} width = "30px"  height="30px" alt="Menú"></img>
-                        </label>
+            <label htmlFor="btn-menu">
+                <img src={btnmenu} width = "30px"  height="30px" alt="Menú"></img>
+            </label>
             <nav className="menu">
                 <ul>
                     <li><Link href="#!">Home
