@@ -25,7 +25,8 @@ const Header= styled.header`
             p{
                 display:flex;
                 position:relative;
-                left:100px;
+                font-size:20px;
+                left:50px;
                 top:45px;
                 color:white;
              
@@ -42,23 +43,37 @@ const Header= styled.header`
  }
     @media screen and (max-width:1010px ){
         
-        
-        .logo{
-            display:flex;
-            justify-content:center;
-            
-            img{
-                display:block;
+        .ContenedorFooter{ 
+            .logo{
+                display:flex;
+                justify-content:center;
                 
+                img{
+                    display:block;
+                    
+                }
             }
         }
-        
+    @media screen and (max-width:450px ){
+        .ContenedorFooter{
+            .logo {
+                img{
+                        width:160px;    
+                }
+                p{
+                    font-size:15px;
+                }
+                
+            } 
+        }
+    }    
 
     @media screen and (max-width:370px ){
-        .logo img{
-                width:160px;
-        }
-        
+        .ContenedorFooter{
+            .logo img{
+                    width:100px;
+            }
+    }  
     }
     }   
 `;
@@ -73,7 +88,7 @@ const Footer = () => {
                 <div className="ContenedorFooter">
                     <div className="logo">
                         <img src={logo}  width = "" height="" alt="Logo_ClubVip"/>
-                        <p>© 2018 Todos los derechos reservados.</p>
+                        <p>ClubVip © 2020 Todos los derechos reservados.</p>
                     </div>
                     
                 </div>    

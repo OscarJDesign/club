@@ -11,6 +11,8 @@ import Menuburger from "./components/Menuburger";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import Novedades from "./components/Novedades";
+import Publicidad from "./components/Publicidad";
+import Nosotros from "./components/Nosotros";
 
 
 // const Menuburger = lazy(() => import("./components/Menuburger"));
@@ -56,7 +58,13 @@ function App() {
         <br />
         <Avisos />
         <br/>
+        <Publicidad/>
+        <br/>
         <Novedades/>
+        <br/>
+        <Publicidad/>
+        <br/>
+        <Nosotros/>
       {/* </Suspense> */}
       <br />
       <Footer />

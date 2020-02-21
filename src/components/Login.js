@@ -3,6 +3,13 @@ import React from 'react';
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import Registro from "./Registro";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const Botonlogin= styled.div`
     .contenedor-general{
@@ -51,6 +58,7 @@ const Botonlogin= styled.div`
                 padding-left:40px;
                 padding-right:40px;
                 background:transparent;
+                z-index:100;
             
 
                 .formulario{
@@ -79,7 +87,7 @@ const Botonlogin= styled.div`
                         padding:14px 40px;
                         cursor:pointer;
                     }
-                    a{
+                    .registrate{
                         display:flex;
                         color:white;
                         justify-content:flex-end;
@@ -150,24 +158,36 @@ const Botonlogin= styled.div`
 
 const Login = () => {
     return (
-        <Botonlogin>
-            <div className="contenedor-general">
-                <input type="checkbox" id="btn-login"></input>
-                <label className="btn-login" htmlFor="btn-login">
-                    <FontAwesomeIcon className="icono-login" icon={faSignInAlt} /></label>
-                <input type="checkbox" id="btn-login"></input>
-                <label className="login" >
-                    <label className="fondotransparente" htmlFor="btn-login"> </label>
-                    <form className="formulario">
-                        <h3>Ingrese al Sitema</h3>
-                        <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
-                        <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
-                        <li><input className="boton" type="submit" value="IniciarSesion"></input></li>
-                        <a href="#!" className="Registrate">Registrate aquí </a>
-                    </form>
-                </label> 
-            </div>    
-        </Botonlogin>
+        <Router>
+            <Botonlogin>
+                
+                <div className="contenedor-general">
+                    <input type="checkbox" id="btn-login"></input>
+                    <label className="btn-login" htmlFor="btn-login">
+                        <FontAwesomeIcon className="icono-login" icon={faSignInAlt} /></label>
+                    <input type="checkbox" id="btn-login"></input>
+                    <label className="login" >
+                        <label className="fondotransparente" htmlFor="btn-login"> </label>
+                        <form className="formulario">
+                            <h3>Ingrese al Sitema</h3>
+                            <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
+                            <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
+                            <li><input className="boton" type="submit" value="IniciarSesion"></input></li>
+                           
+                           
+                            <Link to="registro">
+                            <div className="registrate">Registrate aquí </div>
+                            </Link>
+                        </form>
+                    </label> 
+                    <Switch>
+                        <Route exact path="/registro">
+                            
+                        </Route>
+                    </Switch>
+                </div>    
+            </Botonlogin>
+        </Router>
     );
 };
 

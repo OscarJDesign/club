@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 
 const Header= styled.header`
     width: 100%;
-    height:230px;
+    height:170px;
     background: url(${headmenu}) no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -69,7 +69,7 @@ const Navbar = () => {
     
     return (
       
-        <div className="contenedor">
+        <div className="contenedor" id="home">
             <Header > 
                     <div className="logo">
                         <img src={logo}  width = "" height="" alt="Logo_ClubVip"/>

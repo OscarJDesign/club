@@ -33,7 +33,6 @@ const Contenedoravisos = styled.div`
 
             .cajaimagenes{
                 width:100%;
-                padding:10px;
                 align-items:center;
                 text-align:center;
                 border-radius:8px;
@@ -134,7 +133,7 @@ const Contenedoravisos = styled.div`
 
 const Avisos = () => {
     return (
-        <Contenedoravisos>
+        <Contenedoravisos id="avisos">
           <section className="SeccionChicas">
                 <div className="contenedor">
                     <h2 className="efecto-titulo">Avisos</h2>

@@ -3,8 +3,9 @@ import btnmenu from "../asset/img/img-btn-menu.png";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faFemale, faAd, faVideo, faNewspaper } from '@fortawesome/free-solid-svg-icons';
+import {Link} from "react-scroll";
 
-const Link = styled.a`
+const Enlaces = styled.div`
     
     color: #ffffff;
     padding-bottom: 15px 20px;
@@ -50,7 +51,7 @@ const Menubur= styled.div`
                
            }
     }
-    .menu li a{
+    .menu li .enlace{
 
             display:block;
             padding:10px 20px;
@@ -62,7 +63,7 @@ const Menubur= styled.div`
         .menu{
             justify-content:center;
             margin-left:-30px;
-            li a{
+            li .enlace{
                 padding:10px 10px;
             }
         }
@@ -70,7 +71,7 @@ const Menubur= styled.div`
     }
 
     @media screen and (max-width:620px ){
-        .menu li a{
+        .menu li .enlace{
 
             display:block;
             padding:10px 10px;
@@ -85,7 +86,7 @@ const Menubur= styled.div`
                 ul{
                     margin-left:-20px;
                 
-                li a{
+                li .enlace{
                     padding:10px 10px;
                 }
             }
@@ -98,7 +99,7 @@ const Menubur= styled.div`
                 ul{
                     margin-left:-20px;
                 
-                li a{
+                li .enlace{
                     font-size:15px;
                     padding:10px 7px;
                 }
@@ -118,18 +119,66 @@ const Menuburger = () => {
             </label>
             <nav className="menu">
                 <ul>
-                    <li><Link href="#!">Home
-                    <FontAwesomeIcon className="iconos-menu" icon={faHome} /></Link></li>
-                    <li><Link href="#!">Trabajo
-                    <FontAwesomeIcon className="iconos-menu" icon={faFemale} /></Link></li>
-                    <li><Link href="#!">Videos
-                    <FontAwesomeIcon className="iconos-menu" icon={faVideo} /></Link></li>
-                    <li><Link href="#!">Avisos
-                    <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Link></li>
-                    <li><Link href="#!">Novedades
-                    <FontAwesomeIcon className="iconos-menu" icon={faNewspaper} /></Link></li>
-                    <li><Link href="#!">Nosotros
-                    <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Link></li>
+                <Link
+                        activeClass="active"
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+>
+                    <li><Enlaces className="enlace" >Home
+                    <FontAwesomeIcon className="iconos-menu" icon={faHome} /></Enlaces></li></Link>
+                    <Link
+                        activeClass="active"
+                        to="trabajo"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+>
+                    <li><Enlaces className="enlace">Trabajo
+                    <FontAwesomeIcon className="iconos-menu" icon={faFemale} /></Enlaces></li></Link>
+                    <Link
+                        activeClass="active"
+                        to="videos"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+>
+                    <li><Enlaces className="enlace">Videos
+                    <FontAwesomeIcon className="iconos-menu" icon={faVideo} /></Enlaces></li></Link>
+                    <Link
+                        activeClass="active"
+                        to="avisos"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+>
+                    <li><Enlaces className="enlace">Avisos
+                    <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Enlaces></li></Link>
+                    <Link
+                        activeClass="active"
+                        to="novedades"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+>
+                    <li><Enlaces className="enlace">Novedades
+                    <FontAwesomeIcon className="iconos-menu" icon={faNewspaper} /></Enlaces></li></Link>
+                    <Link
+                        activeClass="active"
+                        to="nosotros"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+>
+                    <li><Enlaces className="enlace">Nosotros
+                    <FontAwesomeIcon className="iconos-menu" icon={faAd} /></Enlaces></li></Link>
                 </ul>
             </nav> 
         </Menubur>

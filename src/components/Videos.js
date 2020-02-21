@@ -81,7 +81,7 @@ section{
 
 const Videos = () => {
     return (
-        <ContenedorVideos >
+        <ContenedorVideos id="videos" >
            
             <section className="SeccionVideos">
                 <div className="contenedor">

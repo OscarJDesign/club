@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import nov1 from "../asset/img/novedad1.jpeg";
+import nov2 from "../asset/img/novedad2.jpeg";
 
 
 
 
-const Contenedoravisos = styled.div`
+const Contenedornovedades = styled.div`
     section{
         background:rgba(255, 255, 255, .6);
         margin:0px 20px 20px 20px;
@@ -60,7 +62,7 @@ const Contenedoravisos = styled.div`
                     }
                 }   
                 .datos-chica{
-                    padding:30px 350px 30px 30px;
+                    padding:30px 370px 30px 30px;
                     
                     display:inline-block;
                     position:relative;
@@ -92,10 +94,7 @@ const Contenedoravisos = styled.div`
                 align-items:center;
                 text-align:center;
                 border-radius:8px;
-                .imagenD {
-                    display:flex;
-                    justify-content:flex-start;
-                }
+                
                 .imagen{
                     display:flex;
                     justify-content:flex-start;
@@ -115,7 +114,7 @@ const Contenedoravisos = styled.div`
                     }
                 }   
                 .datos-chica{
-                    padding:30px 30px 30px 350px;
+                    padding:30px 30px 30px 370px;
                     
                     display:inline-block;
                     position:relative;
@@ -169,6 +168,23 @@ const Contenedoravisos = styled.div`
             }
             
         }
+        section .contenedor .contenedor-imagenes .cajaimagenesI{
+            .imagen {
+                justify-content:center;
+                img{
+                width:25%;
+                }   
+            }
+            .datos-chica{
+                padding:50px 0px 50px 20px;
+                position: relative;
+                padding-left:0px;
+                width:100%;
+                top:0px;
+                
+            }
+            
+        }
         
     }
     @media screen and (max-width:800px){
@@ -181,6 +197,12 @@ const Contenedoravisos = styled.div`
                 width:37%;
             }
         }
+        section .contenedor .contenedor-imagenes .cajaimagenesI{
+            .imagen img{
+                width:37%;
+            }
+        }
+        
     }
     @media screen and (max-width: 500px){
         section .contenedor .contenedor-imagenes .cajaimagenes{
@@ -188,19 +210,24 @@ const Contenedoravisos = styled.div`
                width:73%;
            }
         }
+        section .contenedor .contenedor-imagenes .cajaimagenesI{
+           .imagen img{
+               width:73%;
+           }
+        }
     }
 `;
 
-const Avisos = () => {
+const Novedades = () => {
     return (
-        <Contenedoravisos>
+        <Contenedornovedades id="novedades">
           <section className="SeccionChicas">
                 <div className="contenedor">
                     <h2 className="efecto-titulo">Novedades</h2>
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src="https://www.clubvip.cl/storage/noticias/9LCm0GRZ1y9dwaor5nG1mGqWtJAi2SboxOkHOmZz.jpeg"  width = "700" height="" alt="Logo_ClubVip"/>
+                                <img src={nov1}  width = "700" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                 <a href="#!" className="tituloaviso">7 CONSEJOS PARA HACER LLEGAR AL ORGASMO A LA MUJER</a>
@@ -209,7 +236,7 @@ const Avisos = () => {
                         </div>
                         <div className="cajaimagenesI">
                             <div className="imagen">
-                                <img  src="https://www.clubvip.cl/storage/noticias/oTYfjs9hZW8VA8E4bvtDuxikq16yjDhe8DssTprf.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
+                                <img  src={nov2}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                 <a href="#!" className="tituloaviso">LUGARES PARA LA MUSICA EN CONCEPCIÓN </a>
@@ -221,11 +248,11 @@ const Avisos = () => {
                     </div>      
                 </div>
             </section>  
-        </Contenedoravisos>
+        </Contenedornovedades>
     );
 };    
 
 
 
 
-export default Avisos;
+export default Novedades;
