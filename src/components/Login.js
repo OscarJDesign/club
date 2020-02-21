@@ -169,10 +169,10 @@ const Login = () => {
                     <label className="login" >
                         <label className="fondotransparente" htmlFor="btn-login"> </label>
                         <form className="formulario">
-                            <h3>Ingrese al Sitema</h3>
+                            <h3>Ingresar a ClubVip</h3>
                             <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
                             <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
-                            <li><input className="boton" type="submit" value="IniciarSesion"></input></li>
+                            <li><input className="boton" type="submit" value="Iniciar Sesion"></input></li>
                            
                            
                             <Link to="registro">
