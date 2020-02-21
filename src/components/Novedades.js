@@ -37,17 +37,20 @@ const Contenedoravisos = styled.div`
                 align-items:center;
                 text-align:center;
                 border-radius:8px;
-                
-                .imagen{
+                .imagenD {
                     display:flex;
                     justify-content:flex-start;
+                }
+                .imagen{
+                    display:flex;
+                    justify-content:flex-end;
                     width:100%;
                     margin-bottom:-35px;
                     border-radius:4px;
                    
                     
                     img{
-                        width:20%;
+                        width:40%;
                         
                         box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                         vertical-align:top;
@@ -57,14 +60,14 @@ const Contenedoravisos = styled.div`
                     }
                 }   
                 .datos-chica{
-                    padding:30px 0px 30px 160px;
+                    padding:30px 350px 30px 30px;
                     
                     display:inline-block;
                     position:relative;
                     top:-150px;
                     width:80%;
                     justify-content:center;
-                    background:rgba(255,192,203 ,.4 );
+                    background:rgba(229,180,227 ,.4 );
                     border-radius:4px;
                     box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                     
@@ -74,7 +77,62 @@ const Contenedoravisos = styled.div`
                         :hover{
                             color:rgba(0, 0, 0, .6);
                         }
+                    }
+                    
+                    p{
+                        padding-top:25px;
+                        margin: 0px;
+                        color:black;
+                    }
+                }
+            }
+            .cajaimagenesI{
+                width:100%;
+                padding:10px;
+                align-items:center;
+                text-align:center;
+                border-radius:8px;
+                .imagenD {
+                    display:flex;
+                    justify-content:flex-start;
+                }
+                .imagen{
+                    display:flex;
+                    justify-content:flex-start;
+                    width:100%;
+                    margin-bottom:-35px;
+                    border-radius:4px;
+                   
+                    
+                    img{
+                        width:40%;
+                        
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+                        vertical-align:top;
+                        border-radius:4px; 
+                        z-index: 50;
+                    
+                    }
+                }   
+                .datos-chica{
+                    padding:30px 30px 30px 350px;
+                    
+                    display:inline-block;
+                    position:relative;
+                    top:-150px;
+                    width:80%;
+                    justify-content:center;
+                    background:rgba(229,180,227 ,.4 );
+                    border-radius:4px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+                    
+                    .tituloaviso{
+                        color:rgb(255, 17, 108);
+                        text-decoration:none;
+                        :hover{
+                            color:rgba(0, 0, 0, .6);
                         }
+                    }
                     
                     p{
                         padding-top:25px;
@@ -88,6 +146,7 @@ const Contenedoravisos = styled.div`
     }
     
 }
+
     @media screen and (max-width: 1100px){
         section .contenedor .efecto-titulo{
             font-size:35px;
@@ -137,24 +196,24 @@ const Avisos = () => {
         <Contenedoravisos>
           <section className="SeccionChicas">
                 <div className="contenedor">
-                    <h2 className="efecto-titulo">Avisos</h2>
+                    <h2 className="efecto-titulo">Novedades</h2>
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src="http://18.217.42.238/uploads/d4e07ff5-d7fa-4b09-86b9-f4cdbb4d838a.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="https://www.clubvip.cl/storage/noticias/9LCm0GRZ1y9dwaor5nG1mGqWtJAi2SboxOkHOmZz.jpeg"  width = "700" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
-                                <a href="#!" className="tituloaviso">HERMOSAS CHICAS FULL NOCHE</a>
-                                <p className="descripcionAviso">ESTA NOCHE TE ESPERAN HERMOSAS ESCORT EN CONCEPCION CENTRO, PARA QUE DISFRUTES Y TERELAJES CON NOSOTRAS ... </p>
+                                <a href="#!" className="tituloaviso">7 CONSEJOS PARA HACER LLEGAR AL ORGASMO A LA MUJER</a>
+                                <p className="descripcionAviso">¿Cómo hacer que una mujer llegue al orgasmo? Y, lo más difícil si cabe: ¿cómo conseguir que ese clímax lo recuerde para siempre? Que no te entren los sudores, querido lector, es más fácil de lo que crees. Que la mayoría lo haga mal no significa que tú también. De hecho, tienes la posibil...  </p>
                             </div>
                         </div>
-                        <div className="cajaimagenes">
+                        <div className="cajaimagenesI">
                             <div className="imagen">
-                                <img  src="http://18.217.42.238/uploads/d4e07ff5-d7fa-4b09-86b9-f4cdbb4d838a.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
+                                <img  src="https://www.clubvip.cl/storage/noticias/oTYfjs9hZW8VA8E4bvtDuxikq16yjDhe8DssTprf.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
-                                <a href="#!" className="tituloaviso">HERMOSAS CHICAS FULL NOCHE</a>
-                                <p className="descripcionAviso">Esta noche te esperan hermosas escort en concepción centro, para que disfrutes y te relajes con nosotras ... </p>
+                                <a href="#!" className="tituloaviso">LUGARES PARA LA MUSICA EN CONCEPCIÓN </a>
+                                <p className="descripcionAviso">A Concepción muchas veces la han denominado como la ciudad del rock en el sur de Chile. Y es que de ahí han salido varias bandas conocidas como: “Emociones Clandestinas”, “Machuca” o los populares “Los Tres”. ¿Por qué ocurre esto? ¿Será que algo hay en el agua? La cosa es que, si v... </p>
                             </div>
                         </div>
                         

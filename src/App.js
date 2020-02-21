@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React  from "react";
 import Navbar from "./components/Navbar";
 import GlobalStyles from "./components/GlobalStyles";
 import Videos from "./components/Videos";
@@ -10,6 +10,8 @@ import Chicasagencia from "./components/Chicasagencia";
 import Menuburger from "./components/Menuburger";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import Novedades from "./components/Novedades";
+
 
 // const Menuburger = lazy(() => import("./components/Menuburger"));
 // const Login = lazy(() => import("./components/Login"));
@@ -53,6 +55,8 @@ function App() {
         <Chicasagencia />
         <br />
         <Avisos />
+        <br/>
+        <Novedades/>
       {/* </Suspense> */}
       <br />
       <Footer />
