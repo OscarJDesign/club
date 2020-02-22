@@ -1,15 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 // import btnmenu from "../asset/img/img-btn-menu.png";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import Registro from "./Registro";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+// import Registro from "./Registro";
+import { Link } from "react-router-dom";
 
 const Botonlogin= styled.div`
     .contenedor-general{
@@ -158,9 +153,8 @@ const Botonlogin= styled.div`
 
 const Login = () => {
     return (
-        <Router>
-            <Botonlogin>
-                
+        <Fragment>
+            <Botonlogin>                
                 <div className="contenedor-general">
                     <input type="checkbox" id="btn-login"></input>
                     <label className="btn-login" htmlFor="btn-login">
@@ -172,22 +166,16 @@ const Login = () => {
                             <h3>Ingresar a ClubVip</h3>
                             <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
                             <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
-                            <li><input className="boton" type="submit" value="Iniciar Sesion"></input></li>
-                           
-                           
-                            <Link to="registro">
+                            <li><input className="boton" type="submit" value="Iniciar Sesion"></input></li>   
+                            <Link to="/registro">
                             <div className="registrate">Registrate aquí </div>
                             </Link>
                         </form>
                     </label> 
-                    <Switch>
-                        <Route exact path="/registro">
-                            
-                        </Route>
-                    </Switch>
                 </div>    
-            </Botonlogin>
-        </Router>
+            </Botonlogin>            
+      <br />
+      </Fragment>
     );
 };
 

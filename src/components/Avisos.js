@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
 
-
-
-
 const Contenedoravisos = styled.div`
     section{
         background:rgba(255, 255, 255, .6);

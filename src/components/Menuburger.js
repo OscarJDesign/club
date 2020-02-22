@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import btnmenu from "../asset/img/img-btn-menu.png";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -113,6 +113,7 @@ const Menubur= styled.div`
 
 const Menuburger = () => {
     return (
+        <Fragment>
         <Menubur>
             <label htmlFor="btn-menu">
                 <img src={btnmenu} width = "30px"  height="30px" alt="Menú"></img>
@@ -182,6 +183,8 @@ const Menuburger = () => {
                 </ul>
             </nav> 
         </Menubur>
+        <br/>>
+        </Fragment>
     );
 };
 
