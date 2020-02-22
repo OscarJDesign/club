@@ -162,7 +162,4 @@ const Avisos = () => {
     );
 };    
 
-
-
-
 export default Avisos;

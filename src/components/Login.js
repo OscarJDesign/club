@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
-// import btnmenu from "../asset/img/img-btn-menu.png";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-// import Registro from "./Registro";
 import { Link } from "react-router-dom";
 
 const Botonlogin= styled.div`
@@ -168,7 +166,7 @@ const Login = () => {
                             <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
                             <li><input className="boton" type="submit" value="Iniciar Sesion"></input></li>   
                             <Link to="/registro">
-                            <div className="registrate">Registrate aquí </div>
+                            <div className="registrate">Registrate aquí</div>
                             </Link>
                         </form>
                     </label> 

@@ -5,12 +5,12 @@ import Navbar from "./Navbar";
 import GlobalStyles from "./GlobalStyles";
 import Footer from "./Footer";
 
-
+// Styled Components
 const ContenedorRegistro = styled.div`
-    height: 400px;
-    margin-top: 200px;
-    text-align: center;
-    color: white;    
+  height: 400px;
+  margin-top: 200px;
+  text-align: center;
+  color: white;
 `;
 
 const Registro = () => {
@@ -18,9 +18,9 @@ const Registro = () => {
     <Fragment>
       <GlobalStyles />
       <Navbar />
-      <Link to="/home">
-          <ContenedorRegistro type="button">
-        <h1>FORMULARIO REGISTRO</h1>
+      <Link to="/">
+        <ContenedorRegistro type="button">
+          <button>VOLVER AL INDEX</button>
         </ContenedorRegistro>
       </Link>
 
