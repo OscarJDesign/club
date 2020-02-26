@@ -57,6 +57,7 @@ const Menubur= styled.div`
             padding:10px 20px;
             color:rgb(255,255,255);
             text-shadow: 1px 3px 3px #696;
+            cursor: pointer;
 
     }
     @media screen and (max-width:730px ){
@@ -95,7 +96,7 @@ const Menubur= styled.div`
     @media screen and (max-width:470px ){
         .menu{
             justify-content:center;
-                margin-left:-40px;
+                margin-left:-20px;
                 ul{
                     margin-left:-20px;
                 

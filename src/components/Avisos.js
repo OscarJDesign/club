@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import chica from "../asset/img/chica.png"
 
 const Contenedoravisos = styled.div`
     section{
@@ -90,6 +91,7 @@ const Contenedoravisos = styled.div`
             color:rgb(255, 17, 108);
         }
         section .contenedor .contenedor-imagenes .cajaimagenes{
+            margin-bottom:30px;
             .imagen {
                 justify-content:center;
                 img{
@@ -137,7 +139,7 @@ const Avisos = () => {
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src="http://18.217.42.238/uploads/d4e07ff5-d7fa-4b09-86b9-f4cdbb4d838a.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                 <a href="#!" className="tituloaviso">HERMOSAS CHICAS FULL NOCHE</a>
@@ -146,7 +148,7 @@ const Avisos = () => {
                         </div>
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img  src="http://18.217.42.238/uploads/d4e07ff5-d7fa-4b09-86b9-f4cdbb4d838a.jpeg"  width = "" height="" alt="Logo_ClubVip"/>
+                                <img  src={chica}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
                                 <a href="#!" className="tituloaviso">HERMOSAS CHICAS FULL NOCHE</a>
