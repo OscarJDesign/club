@@ -216,6 +216,7 @@ const Chicasagencia = () => {
                                     <p className="nombre-modelo">Nombre</p>
                                     <p className="descripcion">Nacionalidad, Edad</p>
                                     <p className="medidas">Medidas</p>
+                                    <p>dsadsadsa    </p>
                             </div>
                         </div>
                         
