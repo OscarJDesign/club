@@ -165,7 +165,7 @@ const Login = () => {
                             <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
                             <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
                             <li><input className="boton" type="submit" value="Iniciar Sesion"></input></li>   
-                            <Link to="/registro">
+                            <Link to="/perfil">
                             <div className="registrate">Registrate aquí</div>
                             </Link>
                         </form>

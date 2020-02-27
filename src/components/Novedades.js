@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "@emotion/styled";
 import nov1 from "../asset/img/novedad1.jpeg";
 import nov2 from "../asset/img/novedad2.jpeg";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -39,10 +39,7 @@ const Contenedornovedades = styled.div`
                 align-items:center;
                 text-align:center;
                 border-radius:8px;
-                .imagenD {
-                    display:flex;
-                    justify-content:flex-start;
-                }
+                
                 .imagen{
                     display:flex;
                     justify-content:flex-end;
@@ -52,8 +49,7 @@ const Contenedornovedades = styled.div`
                    
                     
                     img{
-                        width:40%;
-                        
+                        width:34%;
                         box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                         vertical-align:top;
                         border-radius:4px; 
@@ -104,7 +100,7 @@ const Contenedornovedades = styled.div`
                    
                     
                     img{
-                        width:40%;
+                        width:34%;
                         
                         box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                         vertical-align:top;
@@ -227,12 +223,16 @@ const Novedades = () => {
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={nov1}  width = "700" height="" alt="Logo_ClubVip"/>
+                                <img src={nov1}  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
+                            <Link to="/novedad">
                             <div className="datos-chica">
-                                <a href="#!" className="tituloaviso">7 CONSEJOS PARA HACER LLEGAR AL ORGASMO A LA MUJER</a>
+                            
+                                <div className="tituloaviso">7 CONSEJOS PARA HACER LLEGAR AL ORGASMO A LA MUJER</div>
+                            
                                 <p className="descripcionAviso">¿Cómo hacer que una mujer llegue al orgasmo? Y, lo más difícil si cabe: ¿cómo conseguir que ese clímax lo recuerde para siempre? Que no te entren los sudores, querido lector, es más fácil de lo que crees. Que la mayoría lo haga mal no significa que tú también. De hecho, tienes la posibil...  </p>
                             </div>
+                            </Link>
                         </div>
                         <div className="cajaimagenesI">
                             <div className="imagen">

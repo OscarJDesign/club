@@ -10,6 +10,8 @@ import Footer from "./Footer";
 import Novedades from "./Novedades";
 import Publicidad from "./Publicidad";
 import Nosotros from "./Nosotros";
+import Publicidad2 from "./Publicidad2";
+
 
 const Home = () => {
   return (
@@ -28,7 +30,7 @@ const Home = () => {
       <br />
       <Novedades />
       <br />
-      <Publicidad />
+      <Publicidad2 />
       <br />
       <Nosotros />
       <br />
