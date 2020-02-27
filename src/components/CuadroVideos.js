@@ -18,7 +18,7 @@ const FotoVideo = styled.div`
   }
 `;
 
-var urlCompleta = "http://18.217.42.238/api/videos";
+var urlCompleta = "http://18.217.42.238/api/videosPagina";
 var urlCorta = "http://18.217.42.238";
 
 export default class CuadroVideos extends React.Component {
@@ -26,8 +26,8 @@ export default class CuadroVideos extends React.Component {
     listaVideos: []
   };
 
-  componentDidMount() {
-    axios.get(urlCompleta).then(res => {
+  async componentDidMount() {
+   await axios.get(urlCompleta).then(res => {
       const listaVideos = res.data;
       this.setState({ listaVideos });
     });

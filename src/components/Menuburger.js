@@ -6,7 +6,6 @@ import { faHome, faFemale, faAd, faVideo, faNewspaper } from '@fortawesome/free-
 import {Link} from "react-scroll";
 
 const Enlaces = styled.div`
-    
     color: #ffffff;
     padding-bottom: 15px 20px;
     display: block;
@@ -57,6 +56,7 @@ const Menubur= styled.div`
             padding:10px 20px;
             color:rgb(255,255,255);
             text-shadow: 1px 3px 3px #696;
+            text-decoration: none;
             cursor: pointer;
 
     }
@@ -133,8 +133,8 @@ const Menuburger = () => {
                     <FontAwesomeIcon className="iconos-menu" icon={faHome} /></Enlaces></li></Link>                    
                     
                     <li>
-                        <Enlaces className="enlace">
-                        <a href="https://api.whatsapp.com/send?phone=992758262&text=Hola%2C%20quiero%20trabajar%20con%20ustedes">Trabajo</a>
+                        <Enlaces >
+                        <a className="enlace" href="https://api.whatsapp.com/send?phone=992758262&text=Hola%2C%20quiero%20trabajar%20con%20ustedes">Trabajo</a>
                             <FontAwesomeIcon className="iconos-menu" icon={faFemale} />
                         </Enlaces>
                     </li>

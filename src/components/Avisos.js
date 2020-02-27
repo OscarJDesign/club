@@ -128,8 +128,8 @@ export default class Avisos extends React.Component {
     listaAvisos: []
   };
 
-  componentDidMount() {
-    axios.get(`http://18.217.42.238/api/avisosFotos`).then(res => {
+ async componentDidMount() {
+   await axios.get(`http://18.217.42.238/api/avisosFotos`).then(res => {
       const listaAvisos = res.data;
       this.setState({ listaAvisos });
     });

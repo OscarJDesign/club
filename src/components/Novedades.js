@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Contenedornovedades = styled.div`
   section {
@@ -209,8 +209,8 @@ export default class Novedades extends React.Component {
     listaImagenes: []
   };
 
-  componentDidMount() {
-    axios.get(urlCompleta).then(res => {
+  async componentDidMount() {
+    await axios.get(urlCompleta).then(res => {
       const listaImagenes = res.data;
       this.setState({ listaImagenes });
     });
@@ -228,7 +228,7 @@ export default class Novedades extends React.Component {
                 <div className="imagen">
                   <img src={urlCorta + imagenes.path} width="700" height="" alt="Logo_ClubVip" />
                 </div>
-                <Link to = "/novedad">
+                {/* <Link to = "/novedad"> */}
                 <div className="datos-chica">
                   <div className="tituloaviso">
                     {imagenes.titulo}
@@ -237,7 +237,7 @@ export default class Novedades extends React.Component {
                   {imagenes.descripcion}                    
                   </p>
                 </div>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
               ))}
