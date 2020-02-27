@@ -8,6 +8,7 @@ import Videos from './Videos';
 
 const Nosotros = lazy(() => import("./Nosotros.js"));
 const Publicidad = lazy(() => import("./Publicidad.js"));
+const Publicidad2 = lazy(() => import("./Publicidad2.js"));
 const Novedades = lazy(() => import("./Novedades.js"));
 const Chicasagencia = lazy(() => import("./Chicasagencia.js"));
 const Footer = lazy(() => import("./Footer.js"));
@@ -57,7 +58,7 @@ const Home = () => {
       <Novedades />
       <br />
 
-      <Publicidad />
+      <Publicidad2 />
       <br />
 
       <Nosotros />

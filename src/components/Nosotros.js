@@ -85,7 +85,7 @@ const ContenedorPublicidad = styled.div`
             .publicidad{
                 
                .cajapublicidad{
-                    ;
+                    
                    img{
                        display:flex;
                        position: relative;

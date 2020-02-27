@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import wsp from "../asset/img/wsp.png";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Contenedorchicas = styled.div`
   section {
@@ -122,12 +123,14 @@ export default class Chicasagencia extends React.Component {
               {this.state.listaImagenes.map(imagenes => (
                 <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
                   <div className="imagen">
+                    <Link to = "/perfil">
                     <img
                       src={"http://18.217.42.238/" + imagenes.Imagenes[0].path}
                       width=""
                       height=""
                       alt="Logo_ClubVip"
                     />
+                    </Link>
                   </div>
                   <div className="datos-chica">
                     <a href="#!" className="icono-wsp">

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from "@emotion/styled";
 import chica from "../asset/img/chica.png"
+import video from "../asset/img/video.jpg"
 import GlobalStyles from "./GlobalStyles";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -26,14 +27,12 @@ const Contenedorperfil = styled.div`
             text-align:center;
             text-shadow: 3px 4px 4px rgb(0, 0, 0);
             }
-
         .contenedor-imagenes{
             display: flex;
             flex-direction:row;
             flex-wrap:wrap;
             justify-content:space-between;
             padding:20px;
-
             .cajaimagenes{
                 width:35%;
                 padding:10px;
@@ -49,8 +48,7 @@ const Contenedorperfil = styled.div`
                     border-radius:4px;
                     
                     img{
-                        width:80%;
-                        
+                        width:80%;                        
                         box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                         vertical-align:top;
                         border-radius:4px; 
@@ -81,16 +79,18 @@ const Contenedorperfil = styled.div`
                 .nombreModelo{
                   display:flex;
                   justify-content:center;
-                  color:red;
+                  color:#731963;
                   font-size:33px;
+                  text-shadow: 3px 4px 3px rgba(0, 0, 0, .6);
                 }
                 .nacionalidad{
                   display:flex;
                   justify-content:center;
                   font-size:17px;
-                  color:maroon;
+                  color:#820933;
                   margin-top:-30px;
                 }
+                
               }
             }
             .galeriaImagenes{
@@ -102,16 +102,23 @@ const Contenedorperfil = styled.div`
                 justify-content:center;
                 flex-wrap:wrap;
                 .textoimagenes{
-                  width:100%;
+                  width:98%;
+                  font-size:15px;
                   display:flex;
                   justify-content:center;
                   background:rgba(0,0,0,.9);
+                  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
                   border-radius:10px;
                   color:white;
                   margin-bottom:29px;
                 }
-                .imagen{
+                .imagen, .video{
+                  
                   padding:10px 15px;
+                  img{
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+                    border-radius:10px;
+                  }
                 }
               }
             }
@@ -147,6 +154,7 @@ const Contenedorperfil = styled.div`
           .cajaimagenes{
               width:100%;
               .datos-chica{
+                
                 font-size:17px;
               }
           }
@@ -155,11 +163,39 @@ const Contenedorperfil = styled.div`
           }
         }
     }
+    @media screen and (max-width:400px){
+        section .contenedor .contenedor-imagenes{ 
+          .cajaimagenes{
+              width:100%;
+              .datos-chica{
+                font-size:17px;
+                
+              }
+          }
+          .contenedorTexto{
+            width:100%;
+            
+            
+          }
+          .galeriaImagenes{
+            .contenedor{
+              width:99%;
+              .textoimagenes{
+              }
+              .imagen{
+              }
+              .video{
+                img{
+                  width:100%;
+                }
+              }
+            }
+          }
+        }
+    }
 `;
-
-const Chicasagencia = () => {
+const Perfil = () => {
     return (
-
       <Fragment>
       <GlobalStyles />
       <Navbar />
@@ -218,6 +254,19 @@ const Chicasagencia = () => {
                             <div className="textoimagenes">
                               <h2> Videos </h2>
                             </div>
+                            <div className="video">
+                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            <div className="video">
+                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            <div className="video">
+                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            <div className="video">
+                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
+                            </div>
+                            
                           </div>
                         </div>
                     </div>  
@@ -230,8 +279,4 @@ const Chicasagencia = () => {
         </Fragment>
     );
 };    
-
-
-
-
-export default Chicasagencia;
+export default Perfil;

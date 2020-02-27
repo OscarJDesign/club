@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Contenedornovedades = styled.div`
   section {
@@ -46,8 +47,7 @@ const Contenedornovedades = styled.div`
             border-radius: 4px;
 
             img {
-              width: 40%;
-
+              width: 450px;
               box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
               vertical-align: top;
               border-radius: 4px;
@@ -228,14 +228,16 @@ export default class Novedades extends React.Component {
                 <div className="imagen">
                   <img src={urlCorta + imagenes.path} width="700" height="" alt="Logo_ClubVip" />
                 </div>
+                <Link to = "/novedad">
                 <div className="datos-chica">
-                  <a href="#!" className="tituloaviso">
+                  <div className="tituloaviso">
                     {imagenes.titulo}
-                  </a>
+                  </div>
                   <p className="descripcionAviso">
                   {imagenes.descripcion}                    
                   </p>
                 </div>
+                </Link>
               </div>
             </div>
               ))}

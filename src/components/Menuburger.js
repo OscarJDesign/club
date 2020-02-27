@@ -134,7 +134,7 @@ const Menuburger = () => {
                     
                     <li>
                         <Enlaces className="enlace">
-                            <a href="https://api.whatsapp.com/send?phone=992758262&text=Hola%2C%20quiero%20trabajar%20con%20ustedes">Trabajo</a>
+                        <a href="https://api.whatsapp.com/send?phone=992758262&text=Hola%2C%20quiero%20trabajar%20con%20ustedes">Trabajo</a>
                             <FontAwesomeIcon className="iconos-menu" icon={faFemale} />
                         </Enlaces>
                     </li>

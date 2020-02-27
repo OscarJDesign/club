@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import pub1 from "../asset/img/pub1.jpeg";
-import pub2 from "../asset/img/pub3.jpeg";
+import pub3 from "../asset/img/pub2.jpeg";
+import pub4 from "../asset/img/pub4.jpeg";
+
 
 const ContenedorPublicidad = styled.div`
 
@@ -43,16 +44,16 @@ const ContenedorPublicidad = styled.div`
             }   
        }
 `;
-const Publicidad = () => {
+const Publicidad2 = () => {
     return (
         <ContenedorPublicidad>
             <div className="publicidad">
                 <div className="cajapublicidad">
-                    <img src={pub1} alt="publicidadclubvip"></img>
+                    <img src={pub3} alt="publicidadclubvip"></img>
                     
                 </div>
                 <div className="cajapublicidad">
-                    <img src={pub2}  alt="publicidadclubvip"></img>
+                    <img src={pub4}  alt="publicidadclubvip"></img>
                     
                 </div>
             </div>
@@ -60,4 +61,4 @@ const Publicidad = () => {
     );
 };
 
-export default Publicidad;
+export default Publicidad2;
