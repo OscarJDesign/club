@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import styled from "@emotion/styled";
+import LazyLoad from "react-lazyload";
+import Spinner from "./Spinner";
 
 const FotoVideo = styled.div`
   width: 100%;
@@ -37,7 +39,11 @@ export default class CuadroVideos extends React.Component {
     return (
       <>
         {this.state.listaVideos.map(videos => (
-          <div className="cajavideos" key={videos.id}>
+          <LazyLoad  
+          key={videos.id}  
+          placeholder={<Spinner />}
+        >
+          <div className="cajavideos">
             <FotoVideo className="foto-video">
               <video
                 width="300"
@@ -51,6 +57,7 @@ export default class CuadroVideos extends React.Component {
               </video>
             </FotoVideo>
           </div>
+          </LazyLoad>
         ))}
       </>
     );

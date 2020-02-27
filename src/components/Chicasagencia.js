@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 import wsp from "../asset/img/wsp.png";
 import axios from "axios";
 // import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
+import Spinner from "./Spinner";
+
 
 const Contenedorchicas = styled.div`
   section {
@@ -121,7 +124,11 @@ export default class Chicasagencia extends React.Component {
             <h2 className="efecto-titulo">Chicas de la Agencia</h2>
             <div className="contenedor-imagenes">
               {this.state.listaImagenes.map(imagenes => (
-                <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
+                <LazyLoad  
+                key={imagenes.Imagenes[0].id}
+                placeholder={<Spinner />}
+              >
+                <div className="cajaimagenes">
                   <div className="imagen">
                     {/* <Link to = "/perfil"> */}
                     <img
@@ -146,6 +153,7 @@ export default class Chicasagencia extends React.Component {
                     </p>
                   </div>
                 </div>
+                </LazyLoad>
               ))}
             </div>
           </div>

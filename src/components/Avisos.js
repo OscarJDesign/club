@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
+import LazyLoad from "react-lazyload";
+import Spinner from "./Spinner";
 
 const Contenedoravisos = styled.div`
   section {
@@ -143,7 +145,11 @@ export default class Avisos extends React.Component {
             <h2 className="efecto-titulo">Avisos</h2>
             <div className="contenedor-imagenes">
               {this.state.listaAvisos.map(avisos => (
-                <div className="cajaimagenes" key={avisos.id}>
+                <LazyLoad  
+                key={avisos.id}
+                placeholder={<Spinner />}
+              >
+                <div className="cajaimagenes" >
                   <div className="imagen">
                     <img
                       src={
@@ -161,6 +167,7 @@ export default class Avisos extends React.Component {
                     <p className="descripcionAviso">{avisos.descripcion}</p>
                   </div>
                 </div>
+                </LazyLoad>
               ))}
             </div>
           </div>
