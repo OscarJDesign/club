@@ -130,17 +130,15 @@ const Menuburger = () => {
                         duration= {500}
 >
                     <li><Enlaces className="enlace" >Home
-                    <FontAwesomeIcon className="iconos-menu" icon={faHome} /></Enlaces></li></Link>
-                    <Link
-                        activeClass="active"
-                        to="trabajo"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration= {500}
->
-                    <li><Enlaces className="enlace">Trabajo
-                    <FontAwesomeIcon className="iconos-menu" icon={faFemale} /></Enlaces></li></Link>
+                    <FontAwesomeIcon className="iconos-menu" icon={faHome} /></Enlaces></li></Link>                    
+                    
+                    <li>
+                        <Enlaces className="enlace">
+                            <a href="https://api.whatsapp.com/send?phone=992758262&text=Hola%2C%20quiero%20trabajar%20con%20ustedes">Trabajo</a>
+                            <FontAwesomeIcon className="iconos-menu" icon={faFemale} />
+                        </Enlaces>
+                    </li>
+
                     <Link
                         activeClass="active"
                         to="videos"

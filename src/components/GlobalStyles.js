@@ -1,9 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import Fondo from "../asset/img/fondo.jpg";
 
-
-
-
 const GlobalStyles= createGlobalStyle`
 *{
     -moz-box-sizing: border-box;

@@ -81,8 +81,7 @@ const Header= styled.header`
 
 const Footer = () => {
     
-    return (
-      
+    return (      
         <div className="contenedor">
             <Header > 
                 <div className="ContenedorFooter">
@@ -94,8 +93,7 @@ const Footer = () => {
                 </div>    
                               
             </Header> 
-        </div>
- 
+        </div> 
     );
 };
 

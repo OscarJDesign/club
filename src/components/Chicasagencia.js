@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import wsp from "../asset/img/wsp.png";
-// import chica from "../asset/img/chica.png"
 import axios from "axios";
 
 const Contenedorchicas = styled.div`
@@ -109,7 +108,6 @@ export default class Chicasagencia extends React.Component {
   componentDidMount() {
     axios.get(`http://18.217.42.238/api/chicasAgencia`).then(res => {
       const listaImagenes = res.data;
-      console.log(res.data[0].Imagenes[0].path)
       this.setState({ listaImagenes });
     });
   }
@@ -122,10 +120,9 @@ export default class Chicasagencia extends React.Component {
             <h2 className="efecto-titulo">Chicas de la Agencia</h2>
             <div className="contenedor-imagenes">
               {this.state.listaImagenes.map(imagenes => (
-                <div className="cajaimagenes">
+                <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
                   <div className="imagen">
                     <img
-                      key={imagenes.Imagenes[0].id}
                       src={"http://18.217.42.238/" + imagenes.Imagenes[0].path}
                       width=""
                       height=""
@@ -137,8 +134,13 @@ export default class Chicasagencia extends React.Component {
                       <img src={wsp} width="" height="" alt="wsp" />
                     </a>
                     <p className="nombre-modelo">{imagenes.nombre}</p>
-                    <p className="descripcion">{imagenes.nacionalidad}, {imagenes.edad}</p>
-              <p className="medidas">Medidas: {imagenes.busto} - {imagenes.cintura} - {imagenes.caderas}</p>
+                    <p className="descripcion">
+                      {imagenes.nacionalidad}, {imagenes.edad} Años
+                    </p>
+                    <p className="medidas">
+                      Medidas: {imagenes.busto} - {imagenes.cintura} -{" "}
+                      {imagenes.caderas}
+                    </p>
                   </div>
                 </div>
               ))}

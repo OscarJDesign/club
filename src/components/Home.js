@@ -1,38 +1,70 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, lazy, Suspense } from "react";
 import Navbar from "./Navbar";
 import GlobalStyles from "./GlobalStyles";
-import Videos from "./Videos";
-import Avisos from "./Avisos";
-import Chicasagencia from "./Chicasagencia";
 import Menuburger from "./Menuburger";
-import Login from "./Login";
-import Footer from "./Footer";
-import Novedades from "./Novedades";
-import Publicidad from "./Publicidad";
-import Nosotros from "./Nosotros";
+import Spinner from "./Spinner";
+import Login from './Login';
+import Videos from './Videos';
+
+const Nosotros = lazy(() => import("./Nosotros.js"));
+const Publicidad = lazy(() => import("./Publicidad.js"));
+const Novedades = lazy(() => import("./Novedades.js"));
+const Chicasagencia = lazy(() => import("./Chicasagencia.js"));
+const Footer = lazy(() => import("./Footer.js"));
+const Avisos = lazy(() => import("./Avisos.js"));
 
 const Home = () => {
+  // State
+  const [datos, guardarDatos] = useState({
+    email: "",
+    password: ""
+  });
+
+  const [guardarConsulta] = useState(false);
+
   return (
     <Fragment>
       <GlobalStyles />
       <Navbar />
-      <Login />
+      <Login 
+        datos={datos} 
+        guardarDatos={guardarDatos} 
+        guardarConsulta = {guardarConsulta}
+      />
       <Menuburger />
+
       <Videos />
       <br />
+
+      <Suspense
+      fallback={
+        <div>
+          <Spinner />
+        </div>
+      }>
       <Chicasagencia />
+      
       <br />
+      
       <Avisos />
+      
       <br />
+
       <Publicidad />
+      
       <br />
+
       <Novedades />
       <br />
+
       <Publicidad />
       <br />
+
       <Nosotros />
       <br />
+
       <Footer />
+      </Suspense>
     </Fragment>
   );
 };

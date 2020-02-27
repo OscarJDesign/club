@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Botonlogin= styled.div`
     .contenedor-general{
@@ -149,9 +149,64 @@ const Botonlogin= styled.div`
         }
 `;
 
-const Login = () => {
+const Alerta = styled.p`
+color: white;
+`;
+
+const Login = ({datos, guardarDatos, guardarConsulta}) => {    
+
+    // State error
+    const [error, guardarError] = useState(false);
+
+    // Extraer valores
+    const {email, password} = datos;
+
+    // Poner datos en el State
+     const handleChange = e => {
+        guardarDatos({
+            ...datos,
+            [e.target.name] : e.target.value
+        })
+     }     
+
+     // para el submit
+     const handleSubmit = e => {
+         e.preventDefault(e);
+        let url = "http://18.217.42.238/api/login"
+
+
+         axios.post(url, {
+             email : datos.email,
+             password : datos.password
+         }).then(
+            res => {
+                console.log(res.data);
+                localStorage.setItem("clubvip", JSON.stringify({
+                    id: res.data.id,  
+                    nombre: res.data.nombre,
+                    rol: res.data.rolsistema,
+                    token: res.data.token
+                  }));
+                  window.location.href = "http://18.217.42.238/administracion"
+            },
+            err => {
+                console.log(err)
+            }
+        )
+
+        //  validar 
+        if(email.trim() === '' || password.trim() === '' ){
+            guardarError(true);
+            return;
+        }
+        guardarError(false);
+
+        guardarConsulta(true);
+     }
+
+
     return (
-        <Fragment>
+        <>
             <Botonlogin>                
                 <div className="contenedor-general">
                     <input type="checkbox" id="btn-login"></input>
@@ -160,20 +215,49 @@ const Login = () => {
                     <input type="checkbox" id="btn-login"></input>
                     <label className="login" >
                         <label className="fondotransparente" htmlFor="btn-login"> </label>
-                        <form className="formulario">
+                        <form 
+                            className="formulario"
+                            onSubmit={handleSubmit} 
+                        >
                             <h3>Ingresar a ClubVip</h3>
-                            <li><input type="text" placeholder="Nombre" name="nombre" required></input></li>
-                            <li><input type="password" placeholder="Contraseña" name="contraseña" required></input></li>
-                            <li><input className="boton" type="submit" value="Iniciar Sesion"></input></li>   
-                            <Link to="/registro">
+                            {/* Email */}
+                            <li>
+                            {error ? <Alerta>Ingrese todos los datos</Alerta> : null}
+                                <input
+                                    type="text" 
+                                    placeholder="Email" 
+                                    name="email" 
+                                    onChange= {handleChange}
+                                    value={email}
+                                />
+                            </li>
+                            {/* Password */}
+                            <li>
+                                <input 
+                                    type="password" 
+                                    placeholder="Contraseña" 
+                                    name="password" 
+                                    onChange= {handleChange}
+                                    value={password}
+                                />
+                            </li>
+                            {/* Submit */}
+                            <li>
+                                <input 
+                                    className="boton" 
+                                    type="submit" 
+                                    value="Iniciar Sesion"
+                                />
+                            </li>   
+                            {/* <Link to="/registro">
                             <div className="registrate">Registrate aquí</div>
-                            </Link>
+                            </Link> */}
                         </form>
                     </label> 
                 </div>    
             </Botonlogin>            
       <br />
-      </Fragment>
+      </>
     );
 };
 

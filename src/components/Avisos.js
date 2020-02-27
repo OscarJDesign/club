@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import chica from "../asset/img/chica.png"
+import axios from "axios";
 
 const Contenedoravisos = styled.div`
     section{
@@ -130,31 +130,38 @@ const Contenedoravisos = styled.div`
     }
 `;
 
-const Avisos = () => {
+export default class Avisos extends React.Component {
+    state = {
+      listaAvisos: []
+    };
+  
+    componentDidMount() {
+      axios.get(`http://18.217.42.238/api/avisosFotos`).then(res => {
+        const listaAvisos = res.data;
+        this.setState({ listaAvisos });
+      });
+    }
+  
+    render() {
     return (
         <Contenedoravisos id="avisos">
           <section className="SeccionChicas">
                 <div className="contenedor">
                     <h2 className="efecto-titulo">Avisos</h2>
                     <div className="contenedor-imagenes"> 
-                        <div className="cajaimagenes">
+                    {this.state.listaAvisos.map(avisos => (
+                        <div className="cajaimagenes" key={avisos.id}>
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img 
+                                src = {"http://18.217.42.238/" + avisos.User.Imagenes[0].path}
+                                width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica">
-                                <a href="#!" className="tituloaviso">HERMOSAS CHICAS FULL NOCHE</a>
-                                <p className="descripcionAviso">ESTA NOCHE TE ESPERAN HERMOSAS ESCORT EN CONCEPCION CENTRO, PARA QUE DISFRUTES Y TERELAJES CON NOSOTRAS ... </p>
+                                <a href="#!" className="tituloaviso">{avisos.titulo}</a>
+                                <p className="descripcionAviso">{avisos.descripcion}</p>
                             </div>
                         </div>
-                        <div className="cajaimagenes">
-                            <div className="imagen">
-                                <img  src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="datos-chica">
-                                <a href="#!" className="tituloaviso">HERMOSAS CHICAS FULL NOCHE</a>
-                                <p className="descripcionAviso">Esta noche te esperan hermosas escort en concepción centro, para que disfrutes y te relajes con nosotras ... </p>
-                            </div>
-                        </div>
+              ))}
                         
                         
                     </div>      
@@ -162,6 +169,5 @@ const Avisos = () => {
             </section>  
         </Contenedoravisos>
     );
+    };
 };    
-
-export default Avisos;
