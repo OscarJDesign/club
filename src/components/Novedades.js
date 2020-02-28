@@ -225,29 +225,29 @@ export default class Novedades extends React.Component {
           <div className="contenedor">
             <h2 className="efecto-titulo">Novedades</h2>
             {this.state.listaImagenes.map(imagenes => (
-              <LazyLoad  
-                key={imagenes.id}  
-                placeholder={<Spinner />}
-              >
-            <div className="contenedor-imagenes">
-              <div className="cajaimagenes">
-                <div className="imagen">
-                  <img src={urlCorta + imagenes.path} width="700" height="" alt="Logo_ClubVip" />
-                </div>
-                {/* <Link to = "/novedad"> */}
-                <div className="datos-chica">
-                  <div className="tituloaviso">
-                    {imagenes.titulo}
+              <div className="contenedor-imagenes" key={imagenes.id} >
+                <div className="cajaimagenes">
+                  <div className="imagen">
+                    <LazyLoad placeholder={<Spinner />}>
+                      <img
+                        src={urlCorta + imagenes.path}
+                        width="700"
+                        height=""
+                        alt="Logo_ClubVip"
+                      />
+                    </LazyLoad>
                   </div>
-                  <p className="descripcionAviso">
-                  {imagenes.descripcion}                    
-                  </p>
+                  {/* <Link to = "/novedad"> */}
+                  <div className="datos-chica">
+                    <div className="tituloaviso">{imagenes.titulo}</div>
+                    <p className="descripcionAviso">
+                      {imagenes.descripcion.slice(0, 100) + "..."}
+                    </p>
+                  </div>
+                  {/* </Link> */}
                 </div>
-                {/* </Link> */}
               </div>
-            </div>
-            </LazyLoad>
-              ))}
+            ))}
           </div>
         </section>
       </Contenedornovedades>

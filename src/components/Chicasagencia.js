@@ -5,7 +5,6 @@ import axios from "axios";
 import LazyLoad from "react-lazyload";
 import Spinner from "./Spinner";
 
-
 const Contenedorchicas = styled.div`
   section {
     background: rgba(255, 255, 255, 0.6);
@@ -123,24 +122,25 @@ export default class Chicasagencia extends React.Component {
             <h2 className="efecto-titulo">Chicas de la Agencia</h2>
             <div className="contenedor-imagenes">
               {this.state.listaImagenes.map(imagenes => (
-                <LazyLoad  
-                key={imagenes.Imagenes[0].id}
-                placeholder={<Spinner />}
-                >
-                <div className="cajaimagenes">
+                <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
                   <div className="imagen">
                     {/* <Link to = "/perfil"> */}
-                    <img
-                      src={"." + imagenes.Imagenes[0].path}
-                      width=""
-                      height=""
-                      alt="Logo_ClubVip"
-                    />
+                    <LazyLoad placeholder={<Spinner />}>
+                      <img
+                        src={"." + imagenes.Imagenes[0].path}
+                        width=""
+                        height=""
+                        alt="Logo_ClubVip"
+                      />
+                    </LazyLoad>
+
                     {/* </Link> */}
                   </div>
                   <div className="datos-chica">
                     <a href="#!" className="icono-wsp">
-                      <img src={wsp} width="" height="" alt="wsp" />
+                      <LazyLoad placeholder={<Spinner />}>
+                        <img src={wsp} width="" height="" alt="wsp" />
+                      </LazyLoad>
                     </a>
                     <p className="nombre-modelo">{imagenes.nombre}</p>
                     <p className="descripcion">
@@ -152,7 +152,6 @@ export default class Chicasagencia extends React.Component {
                     </p>
                   </div>
                 </div>
-                </LazyLoad>
               ))}
             </div>
           </div>
@@ -161,5 +160,3 @@ export default class Chicasagencia extends React.Component {
     );
   }
 }
-
-// export default Chicasagencia;

@@ -143,24 +143,24 @@ export default class Avisos extends React.Component {
             <h2 className="efecto-titulo">Avisos</h2>
             <div className="contenedor-imagenes">
               {this.state.listaAvisos.map(avisos => (
-                <LazyLoad key={avisos.id} placeholder={<Spinner />}>
-                  <div className="cajaimagenes">
-                    <div className="imagen">
+                <div className="cajaimagenes" key={avisos.id}>
+                  <div className="imagen">
+                    <LazyLoad placeholder={<Spinner />}>
                       <img
                         src={"." + avisos.User.Imagenes[0].path}
                         width=""
                         height=""
                         alt="Logo_ClubVip"
                       />
-                    </div>
-                    <div className="datos-chica">
-                      <a href="#!" className="tituloaviso">
-                        {avisos.titulo}
-                      </a>
-                      <p className="descripcionAviso">{avisos.descripcion}</p>
-                    </div>
+                    </LazyLoad>
                   </div>
-                </LazyLoad>
+                  <div className="datos-chica">
+                    <a href="#!" className="tituloaviso">
+                      {avisos.titulo}
+                    </a>
+                    <p className="descripcionAviso">{avisos.descripcion}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

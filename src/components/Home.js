@@ -1,27 +1,27 @@
-import React, { Fragment, useState, lazy, Suspense } from "react";
+import React, { Fragment, useState } from "react";
 import Navbar from "./Navbar";
 import GlobalStyles from "./GlobalStyles";
 import Menuburger from "./Menuburger";
-import Spinner from "./Spinner";
-// import Login from "./Login";
+// import Spinner from "./Spinner";
 import Videos from "./Videos";
 
-// import Chicasagencia from "./Chicasagencia";
-// import Avisos from "./Avisos";
-// import Novedades from "./Novedades";
-// import Publicidad from './Publicidad';
-// import Publicidad2 from './Publicidad2';
-// import Nosotros from "./Nosotros";
-// import Footer from "./Footer";
+import Chicasagencia from "./Chicasagencia";
+import Login from "./Login";
+import Avisos from "./Avisos";
+import Novedades from "./Novedades";
+import Publicidad from './Publicidad';
+import Publicidad2 from './Publicidad2';
+import Nosotros from "./Nosotros";
+import Footer from "./Footer";
 
-const Chicasagencia = lazy(() => import("./Chicasagencia.js"));
-const Avisos = lazy(() => import("./Avisos.js"));
-const Novedades = lazy(() => import("./Novedades.js"));
-const Publicidad = lazy(() => import("./Publicidad.js"));
-const Publicidad2 = lazy(() => import("./Publicidad2.js"));
-const Nosotros = lazy(() => import("./Nosotros.js"));
-const Footer = lazy(() => import("./Footer.js"));
-const Login = lazy(() => import("./Login.js"));
+// const Chicasagencia = lazy(() => import("./Chicasagencia.js"));
+// const Avisos = lazy(() => import("./Avisos.js"));
+// const Novedades = lazy(() => import("./Novedades.js"));
+// const Publicidad = lazy(() => import("./Publicidad.js"));
+// const Publicidad2 = lazy(() => import("./Publicidad2.js"));
+// const Nosotros = lazy(() => import("./Nosotros.js"));
+// const Footer = lazy(() => import("./Footer.js"));
+// const Login = lazy(() => import("./Login.js"));
 
 // const Videos = lazy(() => import("./Videos.js"));
 
@@ -40,19 +40,19 @@ const Home = () => {
       <Navbar />
 
       {/* INICIO LOGIN */}
-      <Suspense
+      {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
         <Login
           datos={datos}
           guardarDatos={guardarDatos}
           guardarConsulta={guardarConsulta}
         />
-      </Suspense>
+      {/* </Suspense> */}
       {/* FIN LOGIN */}
 
       {/* INICIO MENUBURGER */}
@@ -60,86 +60,86 @@ const Home = () => {
       {/* FIN MENUBURGER */}
 
 
-      
+      {/* INICIO VIDEOS */}
       <Videos />
       {/* </Suspense> */}
       <br />
 
-      <Suspense
+      {/* <Suspense
       fallback={
         <div>
           <Spinner />
         </div>
-      }>
+      }> */}
       <Chicasagencia />
-      </Suspense>
+      {/* </Suspense> */}
 
       <br />
 
-      <Suspense
+      {/* <Suspense
       fallback={
         <div>
           <Spinner />
         </div>
-      }>
+      }> */}
       <Avisos />
-      </Suspense>
+      {/* </Suspense> */}
 
       <br />
-      <Suspense
+      {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
       <Publicidad />
-      </Suspense>
+      {/* </Suspense> */}
 
       <br />
 
-      <Suspense
+       {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
       <Novedades />
-      </Suspense>
+      {/* </Suspense> */}
 
       <br />
-      <Suspense
+       {/* <Suspense
         fallback={
           <div>
             <Spinner />
           </div>
         }
-      >
+      > */}
       <Publicidad2 />
-      </Suspense>
+      {/* </Suspense> */}
       <br />
 
-      <Suspense
-        fallback={
-          <div>
-            <Spinner />
-          </div>
-        }
-      > 
+       {/* <Suspense
+         fallback={
+           <div>
+             <Spinner />
+           </div>
+         }
+       >  */}
       <Nosotros />
-      </Suspense>
+      {/* </Suspense> */}
       <br />
 
-      <Suspense
-        fallback={
-          <div>
-            <Spinner />
-          </div>
-        }
-      >
+       {/* <Suspense
+         fallback={
+           <div>
+             <Spinner />
+           </div>
+         }
+       > */}
       <Footer />
-      </Suspense>
+      {/* </Suspense> */}
     </Fragment>
   );
 };
