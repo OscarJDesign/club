@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import styled from "@emotion/styled";
-import chica from "../asset/img/chica.png"
-import video from "../asset/img/video.jpg"
 import GlobalStyles from "./GlobalStyles";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -27,14 +25,12 @@ const Contenedorperfil = styled.div`
             text-align:center;
             text-shadow: 3px 4px 4px rgb(0, 0, 0);
             }
-
         .contenedor-imagenes{
             display: flex;
             flex-direction:row;
             flex-wrap:wrap;
             justify-content:space-between;
             padding:20px;
-
             .cajaimagenes{
                 width:35%;
                 padding:10px;
@@ -50,8 +46,7 @@ const Contenedorperfil = styled.div`
                     border-radius:4px;
                     
                     img{
-                        width:80%;
-                        
+                        width:80%;                        
                         box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
                         vertical-align:top;
                         border-radius:4px; 
@@ -184,10 +179,8 @@ const Contenedorperfil = styled.div`
             .contenedor{
               width:99%;
               .textoimagenes{
-
               }
               .imagen{
-
               }
               .video{
                 img{
@@ -199,10 +192,8 @@ const Contenedorperfil = styled.div`
         }
     }
 `;
-
 const Perfil = () => {
     return (
-
       <Fragment>
       <GlobalStyles />
       <Navbar />
@@ -215,7 +206,7 @@ const Perfil = () => {
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src="#!"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica"> 
                                     <p className="edad">Edad</p>
@@ -238,40 +229,14 @@ const Perfil = () => {
                               <h2> Imágenes </h2>
                             </div>
                             <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
+                              <img src="#!"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
-                            <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="imagen">
-                              <img src={chica}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
+
                             <div className="textoimagenes">
                               <h2> Videos </h2>
                             </div>
                             <div className="video">
-                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="video">
-                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="video">
-                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
-                            </div>
-                            <div className="video">
-                              <img src={video}  width = "" height="" alt="Logo_ClubVip"/>
+                              <img src="#!"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             
                           </div>
@@ -286,8 +251,4 @@ const Perfil = () => {
         </Fragment>
     );
 };    
-
-
-
-
 export default Perfil;

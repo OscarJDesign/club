@@ -1,12 +1,6 @@
-import React, { Suspense } from "react";
+import React from "react";
 import styled from "@emotion/styled";
-import Spinner from "./Spinner";
-import axios from "axios";
-
-// import video from "../asset/img/video.jpg";
-// import CuadroVideos from './CuadroVideos';
-
-// const CuadroVideos = lazy(() => import("./CuadroVideos"));
+import CuadroVideos from './CuadroVideos';
 
 const ContenedorVideos = styled.div`
   section {
@@ -70,72 +64,21 @@ const ContenedorVideos = styled.div`
   }
 `;
 
-const FotoVideo = styled.div`
-  width: 100%;
-  min-width: 300px;
-  margin-bottom: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-  border-radius: 14px;
-  padding: 0px 0px;
-  video {
-    width: 100%;
+// const CuadroVideos = lazy(() => import("./CuadroVideos.js"));
 
-    vertical-align: top;
-    border-radius: 14px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-  }
-`;
-
-export default class Videos extends React.Component {
-  state = {
-    listaVideos: []
-  };
-
-  componentDidMount() {
-    axios.get(`http://18.217.42.238/api/videos`).then(res => {
-      const listaVideos = res.data;
-      this.setState({ listaVideos });
-    });
-  }
-
-  render() {
+const Videos = () => {
     return (
       <ContenedorVideos id="videos">
         <section className="SeccionVideos">
           <div className="contenedor">
             <h2 className="efecto-titulo">Videos</h2>
             <div className="contenedor-videos">
-              {this.state.listaVideos.map(videos => (
-                <div className="cajavideos">
-                  <Suspense
-                    fallback={
-                      <div>
-                        <Spinner />
-                      </div>
-                    }
-                  >
-                    <FotoVideo className="foto-video">
-                      <video
-                        width="300"
-                        src={"http://18.217.42.238" + videos.path}
-                        controls
-                        controlsList="nodownload"
-                        disablePictureInPicture
-                        preload="metadata"
-                      >
-                        <source src="movie.mp4" type="video/mp4"></source>
-                      </video>
-                    </FotoVideo>
-                    {/* <div className="titulo-video">
-                  <p className="nombre-modelo">Informacion de la modelo</p>
-                </div> */}
-                  </Suspense>
-                </div>
-              ))}
+                <CuadroVideos />
             </div>
           </div>
         </section>
       </ContenedorVideos>
-    );
-  }
+    );  
 }
+
+export default Videos;

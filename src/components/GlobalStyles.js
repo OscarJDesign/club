@@ -1,10 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 import Fondo from "../asset/img/fondo.jpeg";
 
-
-
-
-const GlobalStyles= createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 *{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -12,17 +9,16 @@ const GlobalStyles= createGlobalStyle`
   }
 
   body {
-        margin: 0;
-        padding:0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      margin: 0;
+      padding:0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
       background: url(${Fondo}) no-repeat;
       background-size: cover;
       background-attachment: fixed;
       font-family: 'Dancing Script', cursive;
-      font-size: 20px;
-      
+      font-size: 20px;      
       ;
   }
 `;
