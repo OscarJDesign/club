@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import nos from "../asset/img/nosotros.jpeg";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 
 const ContenedorPublicidad = styled.div`
   background: #1a1a1a;
@@ -101,9 +101,9 @@ const Nosotros = () => {
     <ContenedorPublicidad id="nosotros">
       <div className="publicidad">
         <div className="cajapublicidad">
-          <LazyLoad placeholder={<Spinner />}>
+          {/* <LazyLoad placeholder={<Spinner />}> */}
             <img src={nos} alt="nosotrosclubvip"></img>
-          </LazyLoad>
+          {/* </LazyLoad> */}
           <div className="textonosotros">
             <p className="titulo-nosotros">Hola!</p>
             <p className="texto">

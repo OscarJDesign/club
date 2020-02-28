@@ -2,8 +2,8 @@ import React from 'react';
 import styled from "@emotion/styled";
 import pub1 from "../asset/img/pub1.jpeg";
 import pub2 from "../asset/img/pub3.jpeg";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 
 const ContenedorPublicidad = styled.div`
 
@@ -51,19 +51,19 @@ const Publicidad = () => {
             <div className="publicidad">
             
                 <div className="cajapublicidad">
-                <LazyLoad  
+                {/* <LazyLoad  
                 placeholder={<Spinner />}
-              >
+              > */}
                     <img src={pub1} alt="publicidadclubvip"></img>
-                </LazyLoad>
+                {/* </LazyLoad> */}
                     
                 </div>
                 <div className="cajapublicidad">
-                <LazyLoad  
+                {/* <LazyLoad  
                 placeholder={<Spinner />}
-              >
+              > */}
                     <img src={pub2}  alt="publicidadclubvip"></img>
-                    </LazyLoad>
+                    {/* </LazyLoad> */}
                     
                 </div>
             </div>

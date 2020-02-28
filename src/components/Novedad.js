@@ -5,8 +5,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Menuburger from "./Menuburger";
 import Login from "./Login";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 
 const Contenedornovedad = styled.div`
   section {
@@ -232,9 +232,9 @@ const Novedades = () => {
             <div className="contenedor-imagenes">
               <div className="cajaimagenes">
                 <div className="imagen">
-                <LazyLoad  placeholder={<Spinner />}>
+                {/* <LazyLoad  placeholder={<Spinner />}> */}
                   <img src="#!" width="" height="" alt="Logo_ClubVip" />
-                  </LazyLoad>
+                  {/* </LazyLoad> */}
                 </div>
                 <div className="datos-chica">
                   <div className="tituloaviso">

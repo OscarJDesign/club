@@ -2,8 +2,8 @@ import React from "react";
 import logo from "../asset/img/logo.png";
 import headmenu from "../asset/img/footer.png";
 import styled from "@emotion/styled";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 
 const Header = styled.header`
   width: 100%;
@@ -80,9 +80,9 @@ const Footer = () => {
       <Header>
         <div className="ContenedorFooter">
           <div className="logo">
-            <LazyLoad placeholder={<Spinner />}>
+            {/* <LazyLoad placeholder={<Spinner />}> */}
               <img src={logo} width="" height="" alt="Logo_ClubVip" />
-            </LazyLoad>
+            {/* </LazyLoad> */}
             <p>ClubVip © 2020 Todos los derechos reservados.</p>
           </div>
         </div>

@@ -2,8 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import wsp from "../asset/img/wsp.png";
 import axios from "axios";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 
 const Contenedorchicas = styled.div`
   section {
@@ -125,22 +125,22 @@ export default class Chicasagencia extends React.Component {
                 <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
                   <div className="imagen">
                     {/* <Link to = "/perfil"> */}
-                    <LazyLoad placeholder={<Spinner />}>
+                    {/* <LazyLoad placeholder={<Spinner />}> */}
                       <img
                         src={"." + imagenes.Imagenes[0].path}
                         width=""
                         height=""
                         alt="Logo_ClubVip"
                       />
-                    </LazyLoad>
+                    {/* </LazyLoad> */}
 
                     {/* </Link> */}
                   </div>
                   <div className="datos-chica">
                     <a href="#!" className="icono-wsp">
-                      <LazyLoad placeholder={<Spinner />}>
+                      {/* <LazyLoad placeholder={<Spinner />}> */}
                         <img src={wsp} width="" height="" alt="wsp" />
-                      </LazyLoad>
+                      {/* </LazyLoad> */}
                     </a>
                     <p className="nombre-modelo">{imagenes.nombre}</p>
                     <p className="descripcion">

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 // import { Link } from "react-router-dom";
 
 const Contenedornovedades = styled.div`
@@ -228,14 +228,14 @@ export default class Novedades extends React.Component {
               <div className="contenedor-imagenes" key={imagenes.id} >
                 <div className="cajaimagenes">
                   <div className="imagen">
-                    <LazyLoad placeholder={<Spinner />}>
+                    {/* <LazyLoad placeholder={<Spinner />}> */}
                       <img
                         src={urlCorta + imagenes.path}
                         width="700"
                         height=""
                         alt="Logo_ClubVip"
                       />
-                    </LazyLoad>
+                    {/* </LazyLoad> */}
                   </div>
                   {/* <Link to = "/novedad"> */}
                   <div className="datos-chica">

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
-import LazyLoad from "react-lazyload";
-import Spinner from "./Spinner";
+// import LazyLoad from "react-lazyload";
+// import Spinner from "./Spinner";
 
 const Contenedoravisos = styled.div`
   section {
@@ -145,14 +145,14 @@ export default class Avisos extends React.Component {
               {this.state.listaAvisos.map(avisos => (
                 <div className="cajaimagenes" key={avisos.id}>
                   <div className="imagen">
-                    <LazyLoad placeholder={<Spinner />}>
+                    {/* <LazyLoad placeholder={<Spinner />}> */}
                       <img
                         src={"." + avisos.User.Imagenes[0].path}
                         width=""
                         height=""
                         alt="Logo_ClubVip"
                       />
-                    </LazyLoad>
+                    {/* </LazyLoad> */}
                   </div>
                   <div className="datos-chica">
                     <a href="#!" className="tituloaviso">
