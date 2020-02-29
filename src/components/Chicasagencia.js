@@ -126,16 +126,13 @@ export default class Chicasagencia extends React.Component {
               {this.state.listaImagenes.map(imagenes => (
                 <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
                   <div className="imagen">
-                  <Link to = {`/perfil/${imagenes.id}`}>               
-                    {/* <LazyLoad placeholder={<Spinner />}> */}
+                  <Link to = {`/perfil/${imagenes.id}`}>              
                       <img
-                        src={"." + imagenes.Imagenes[0].path}
+                        src={"http://18.217.42.238" + imagenes.Imagenes[0].path}
                         width=""
                         height=""
                         alt="Logo_ClubVip"
                       />
-                    {/* </LazyLoad> */}
-
                     </Link>
                   </div>
                   <div className="datos-chica">

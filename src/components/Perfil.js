@@ -4,8 +4,7 @@ import GlobalStyles from "./GlobalStyles";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Menuburger from "./Menuburger";
-import axios from "axios";
-
+import axios from "axios"
 
 const Contenedorperfil = styled.div`
     section{
@@ -196,34 +195,41 @@ const Contenedorperfil = styled.div`
 `;
 const Perfil = ({match}) => {
 
-  const [novedad, setNovedad] = useState({});
-  useEffect(() => {
+  const [perfil, setPerfil] = useState({});
+  const [fotoPerfil, setFotoPerfil] = useState({});
+  const [galeriaFotos, setGaleriaFotos] = useState({});
+  const [galeriaVideos, setGaleriaVideos] = useState({});
+
+
+  
+
+  const fetchData = async() => {
+    const url = `http://18.217.42.238/api/chicaAgenciaTodo/${match.params.id}`
+
+
+    const datosApi = axios.get(url);
     
 
+    await axios.all([datosApi]).then(
+      await axios.spread((...allData) =>{
+        const allDatos = allData[0].data;
+        console.log(allDatos)
+        allDatos.Imagenes.map( data => { 
+          if(data.tipo == 'perfil'){
+            setFotoPerfil(data.path)
+          }else{
+            setGaleriaFotos(...data.path)
+          }
+        })
+        setPerfil(allDatos);
+        console.log(galeriaFotos)
+      })
+    )
+  }
 
-    //   const response = await fetch(`http://18.217.42.238/api/perfil/${match.params.id}`);
-    //   const json = await response.json();
-    //   setNovedad(json);
-    // }
-
-    let one = `http://18.217.42.238/api/chicaAgencia/${match.params.id}`;
-    let two = `http://18.217.42.238/api/chicaAgencia/${match.params.id}`
-    // let three = "https://api.storyblok.com/v1/cdn/stories/vue?version=published&token=wANpEQEsMYGOwLxwXQ76Ggtt"
-
-    const requestOne = axios.get(one);
-    const requestTwo = axios.get(two);
-    // const requestThree = axios.get(three);
-
-    axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
-      const responseOne = responses[0]
-      const responseTwo = responses[1]
-      // const responesThree = responses[2]
-      // use/access the results 
-    })).catch(errors => {
-      // react on errors.
-    })
-
-  }, [match]);
+  useEffect(() => {
+      fetchData()
+    },[match]);
 
     return (
       <Fragment>
@@ -238,21 +244,21 @@ const Perfil = ({match}) => {
                     <div className="contenedor-imagenes"> 
                         <div className="cajaimagenes">
                             <div className="imagen">
-                                <img src="#!"  width = "" height="" alt="Logo_ClubVip"/>
+                                <img src= { 'http://18.217.42.238/' + fotoPerfil} width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica"> 
-                                    <p className="edad">{novedad.edad}</p>
-                                    <p className="altura">{novedad.altura}</p>
-                                    <p className="busto">{novedad.busto}</p>
-                                    <p className="cintura">{novedad.cintura}</p>
-                                    <p className="caderas">{novedad.caderas}</p>
+                                    <p className="edad">{perfil.edad}</p>
+                                    <p className="altura">{perfil.altura}</p>
+                                    <p className="busto">{perfil.busto}</p>
+                                    <p className="cintura">{perfil.cintura}</p>
+                                    <p className="caderas">{perfil.caderas}</p>
                             </div>
                         </div>
                         <div className="contenedorTexto">
                           <div className="descripcion">
-                            <h3 className="nombreModelo">{novedad.nombre}</h3>
-                            <h4 className="nacionalidad">{novedad.nacionalidad}</h4>
-                            <p> Hola amor, soy Michelle, una simpática y cariñosa joven de 22 años, soy entregada y dedicada, quiero que pasemos buenos momentos juntos y te relajes junto a mi. Soy una chica atrevida y con mucha pasión, ven a disfrutar junto a mi </p>
+                            <h3 className="nombreModelo">{perfil.nombre}</h3>
+                            <h4 className="nacionalidad">{perfil.nacionalidad}</h4>
+                            <p>{perfil.descripcion}</p>
                           </div>
                         </div> 
                         <div className="galeriaImagenes">
@@ -260,9 +266,11 @@ const Perfil = ({match}) => {
                             <div className="textoimagenes">
                               <h2> Imágenes </h2>
                             </div>
+                           {/* {galeriaFotos.map(fotos => (
                             <div className="imagen">
-                              <img src="#!"  width = "" height="" alt="Logo_ClubVip"/>
+                              <img src=""  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
+                             ))} */}
 
                             <div className="textoimagenes">
                               <h2> Videos </h2>
