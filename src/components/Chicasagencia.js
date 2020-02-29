@@ -2,6 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import wsp from "../asset/img/wsp.png";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 // import LazyLoad from "react-lazyload";
 // import Spinner from "./Spinner";
 
@@ -124,7 +126,7 @@ export default class Chicasagencia extends React.Component {
               {this.state.listaImagenes.map(imagenes => (
                 <div className="cajaimagenes" key={imagenes.Imagenes[0].id}>
                   <div className="imagen">
-                    {/* <Link to = "/perfil"> */}
+                  <Link to = {`/perfil/${imagenes.id}`}>               
                     {/* <LazyLoad placeholder={<Spinner />}> */}
                       <img
                         src={"." + imagenes.Imagenes[0].path}
@@ -134,7 +136,7 @@ export default class Chicasagencia extends React.Component {
                       />
                     {/* </LazyLoad> */}
 
-                    {/* </Link> */}
+                    </Link>
                   </div>
                   <div className="datos-chica">
                     <a href="#!" className="icono-wsp">

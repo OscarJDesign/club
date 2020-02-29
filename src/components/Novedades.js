@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
+// import Novedad from './Novedad';
 // import LazyLoad from "react-lazyload";
 // import Spinner from "./Spinner";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Contenedornovedades = styled.div`
   section {
@@ -204,7 +205,7 @@ const Contenedornovedades = styled.div`
 `;
 
 let urlCompleta = "http://18.217.42.238/api/noticias";
-let urlCorta = ".";
+let urlCorta = "http://18.217.42.238/";
 
 export default class Novedades extends React.Component {
   state = {
@@ -237,14 +238,14 @@ export default class Novedades extends React.Component {
                       />
                     {/* </LazyLoad> */}
                   </div>
-                  {/* <Link to = "/novedad"> */}
+                  <Link to = {`/novedad/${imagenes.id}`}>
                   <div className="datos-chica">
                     <div className="tituloaviso">{imagenes.titulo}</div>
                     <p className="descripcionAviso">
                       {imagenes.descripcion.slice(0, 100) + "..."}
                     </p>
                   </div>
-                  {/* </Link> */}
+                  </Link>
                 </div>
               </div>
             ))}

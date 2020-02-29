@@ -1,9 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import styled from "@emotion/styled";
 import GlobalStyles from "./GlobalStyles";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Menuburger from "./Menuburger";
+import axios from "axios";
+
 
 const Contenedorperfil = styled.div`
     section{
@@ -192,7 +194,37 @@ const Contenedorperfil = styled.div`
         }
     }
 `;
-const Perfil = () => {
+const Perfil = ({match}) => {
+
+  const [novedad, setNovedad] = useState({});
+  useEffect(() => {
+    
+
+
+    //   const response = await fetch(`http://18.217.42.238/api/perfil/${match.params.id}`);
+    //   const json = await response.json();
+    //   setNovedad(json);
+    // }
+
+    let one = `http://18.217.42.238/api/chicaAgencia/${match.params.id}`;
+    let two = `http://18.217.42.238/api/chicaAgencia/${match.params.id}`
+    // let three = "https://api.storyblok.com/v1/cdn/stories/vue?version=published&token=wANpEQEsMYGOwLxwXQ76Ggtt"
+
+    const requestOne = axios.get(one);
+    const requestTwo = axios.get(two);
+    // const requestThree = axios.get(three);
+
+    axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
+      const responseOne = responses[0]
+      const responseTwo = responses[1]
+      // const responesThree = responses[2]
+      // use/access the results 
+    })).catch(errors => {
+      // react on errors.
+    })
+
+  }, [match]);
+
     return (
       <Fragment>
       <GlobalStyles />
@@ -209,17 +241,17 @@ const Perfil = () => {
                                 <img src="#!"  width = "" height="" alt="Logo_ClubVip"/>
                             </div>
                             <div className="datos-chica"> 
-                                    <p className="edad">Edad</p>
-                                    <p className="altura">Altura</p>
-                                    <p className="busto">Busto</p>
-                                    <p className="cintura">Cintura</p>
-                                    <p className="caderas">Cadera</p>
+                                    <p className="edad">{novedad.edad}</p>
+                                    <p className="altura">{novedad.altura}</p>
+                                    <p className="busto">{novedad.busto}</p>
+                                    <p className="cintura">{novedad.cintura}</p>
+                                    <p className="caderas">{novedad.caderas}</p>
                             </div>
                         </div>
                         <div className="contenedorTexto">
                           <div className="descripcion">
-                            <h3 className="nombreModelo">Nombre Modelo</h3>
-                            <h4 className="nacionalidad"> --- Nacionalidad ---</h4>
+                            <h3 className="nombreModelo">{novedad.nombre}</h3>
+                            <h4 className="nacionalidad">{novedad.nacionalidad}</h4>
                             <p> Hola amor, soy Michelle, una simpática y cariñosa joven de 22 años, soy entregada y dedicada, quiero que pasemos buenos momentos juntos y te relajes junto a mi. Soy una chica atrevida y con mucha pasión, ven a disfrutar junto a mi </p>
                           </div>
                         </div> 
